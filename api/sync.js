@@ -15,9 +15,6 @@ export default async function handler(req, res) {
     const sent = req.headers['x-sync-token'];
     const expected = process.env.SYNC_TOKEN;
 
-    console.log("Expected token:", expected);
-    console.log("Received token:", sent);
-
     console.log("🔑 Expected SYNC_TOKEN from env:", expected);
     console.log("📩 Received x-sync-token header:", sent);
 
@@ -25,11 +22,22 @@ export default async function handler(req, res) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const result = await runSync(); // does the heavy lifting
-    return res.status(200).json({ ok: true, ...result });
+    // ✅ Respond early to avoid timeout
+    res.status(202).json({ ok: true, message: 'Sync started in background' });
+
+    // 🔄 Run sync in background (after response is sent)
+    setTimeout(async () => {
+      try {
+        console.log("🔁 Starting Notion sync in background...");
+        const result = await runSync();
+        console.log("✅ Background sync complete:", result);
+      } catch (err) {
+        console.error("❌ Background sync failed:", err.message);
+      }
+    }, 0);
 
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ ok: false, error: e.message || 'sync failed' });
+    // Just log the error, don't try to respond again
   }
 }
