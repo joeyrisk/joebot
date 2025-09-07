@@ -1,8 +1,12 @@
 export const config = {
-  schedule: '0 10 * * *',
+  schedule: '0 10 * * *', // Runs daily at 10am UTC
 };
 
 export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(200).json({ ok: true, message: 'Cron endpoint ready.' });
+  }
+
   const endpoint = `${process.env.BASE_URL}/api/sync`;
   const syncToken = process.env.SYNC_TOKEN;
 
@@ -22,4 +26,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ ok: false, error: err.message });
   }
 }
-
