@@ -1,5 +1,5 @@
 export const config = {
-  schedule: '0 10 * * *', // Runs every day at 10:00 AM UTC
+  schedule: '0 10 * * *',
 };
 
 export default async function handler(req, res) {
@@ -15,13 +15,11 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-
     if (!response.ok) throw new Error(data.error || 'Sync failed');
 
-    console.log('✅ Sync completed:', data);
     return res.status(200).json({ ok: true, data });
   } catch (err) {
-    console.error('❌ Cron sync failed:', err.message);
     return res.status(500).json({ ok: false, error: err.message });
   }
 }
+
