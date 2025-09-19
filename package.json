@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@notionhq/client": "^4.0.2",
+    "dotenv": "^17.2.2",
     "next": "^15.5.2",
     "notion-to-md": "^3.1.9",
     "openai": "^4.104.0",
