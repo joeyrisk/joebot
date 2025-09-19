@@ -2,6 +2,12 @@
   "name": "joebot-api",
   "version": "1.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prebuild": "node ./scripts/generate-carrier-lookup.js"
+  },
   "dependencies": {
     "@notionhq/client": "^4.0.2",
     "dotenv": "^17.2.2",

@@ -1,14 +1,12 @@
-// generate-carrier-lookup.js
+// /scripts/generate-carrier-lookup.js
 import { Client } from "@notionhq/client";
 import fs from "fs";
 
-// ✅ Replace with your Carrier DB ID (the "Carriers, Brokers and Vendors" DB)
 const CARRIERS_DB_ID = process.env.NOTION_DB_CARRIERS;
 
-// ✅ Init client
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
-  notionVersion: "2022-06-28", // stable version works fine for DB queries
+  notionVersion: "2022-06-28",
 });
 
 async function fetchCarriers() {
@@ -36,7 +34,7 @@ function buildLookup(carriers) {
       nameProp?.rich_text?.[0]?.plain_text?.trim();
 
     if (name) {
-      lookup[name] = page.id; // page.id is the UUID Notion expects
+      lookup[name] = page.id;
     }
   });
   return lookup;
@@ -50,16 +48,16 @@ function buildLookup(carriers) {
 
     const lookup = buildLookup(carriers);
 
-    // Write to file for copy-paste
     const output = `export const carrierLookup = ${JSON.stringify(
       lookup,
       null,
       2
     )};\n`;
 
-    fs.writeFileSync("carrierLookup.mjs", output);
+    // ✅ Write to /lib instead of root
+    fs.writeFileSync("./lib/carrierLookup.mjs", output);
 
-    console.log("✅ carrierLookup.mjs written. Example:");
+    console.log("✅ lib/carrierLookup.mjs written. Example:");
     console.log(output);
   } catch (err) {
     console.error("❌ Error fetching carriers:", err.message);
