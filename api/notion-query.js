@@ -1,8 +1,8 @@
 // /api/notion-query.js
 import { Client, APIErrorCode } from "@notionhq/client";
 import { notionDbMap } from "../lib/notionDbMap.mjs";
-import { validateEnvVars } from "../lib/validateEnv.js";
-import { carrierLookup } from "../lib/carrierLookup.mjs"; // ✅ always available
+import { validateEnvVars } from "../lib/validateEnv.mjs"; // ✅ make sure file is .mjs
+import { carrierLookup } from "../lib/carrierLookup.mjs"; // ✅ auto-generated at build
 
 // ✅ ENV validation
 validateEnvVars([
@@ -118,9 +118,9 @@ export default async function handler(req, res) {
               case "rich_text":
                 return [k, v.rich_text?.[0]?.plain_text || ""];
               case "relation":
-                return [k, v.relation?.map(r => r.id) || []];
+                return [k, v.relation?.map((r) => r.id) || []];
               case "multi_select":
-                return [k, v.multi_select?.map(item => item.name) || []];
+                return [k, v.multi_select?.map((item) => item.name) || []];
               case "checkbox":
                 return [k, v.checkbox || false];
               case "number":
