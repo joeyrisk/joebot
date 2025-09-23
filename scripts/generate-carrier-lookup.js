@@ -3,11 +3,12 @@ import { Client } from "@notionhq/client";
 import fs from "fs";
 import { notionDbMap } from "../lib/notionDbMap.mjs";
 
-const CARRIERS_DATA_SOURCE_ID = notionDbMap.carriers.dataSourceId;
+// ✅ Use the databaseId, not the dataSourceId
+const CARRIERS_DB_ID = notionDbMap.carriers.databaseId;
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
-  notionVersion: "2025-09-03", // consistent with your notion-query.js
+  notionVersion: "2022-06-28", // stable version works best
 });
 
 async function fetchCarriers() {
@@ -15,13 +16,12 @@ async function fetchCarriers() {
   let cursor = undefined;
 
   do {
-    const response = await notion.request({
-      path: `data_sources/${CARRIERS_DATA_SOURCE_ID}/query`,
-      method: "POST",
-      body: cursor ? { start_cursor: cursor } : {}
+    const response = await notion.databases.query({
+      database_id: CARRIERS_DB_ID,
+      start_cursor: cursor,
     });
 
-    results = results.concat(response.results || []);
+    results = results.concat(response.results);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
@@ -47,23 +47,10 @@ function buildLookup(carriers) {
 
 (async () => {
   try {
-    console.log("🔎 Fetching carriers from Notion (via data source)...");
+    console.log("🔎 Fetching carriers from Notion (via databaseId)...");
     const carriers = await fetchCarriers();
     console.log(`✅ Found ${carriers.length} carriers.`);
 
     const lookup = buildLookup(carriers);
 
-    const output = `export const carrierLookup = ${JSON.stringify(
-      lookup,
-      null,
-      2
-    )};\n`;
-
-    fs.writeFileSync("./lib/carrierLookup.mjs", output);
-
-    console.log("✅ lib/carrierLookup.mjs written. Example:");
-    console.log(output);
-  } catch (err) {
-    console.error("❌ Error fetching carriers:", err.message);
-  }
-})();
+    const out
