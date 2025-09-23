@@ -1,0 +1,161 @@
+{
+  "object": "database",
+  "id": "1f8abcb1-dcc4-804a-91fe-d8e0eeb7b299",
+  "cover": null,
+  "icon": {
+    "type": "emoji",
+    "emoji": "❌"
+  },
+  "created_time": "2025-05-19T17:27:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "1cdd872b-594c-815e-bc5c-0002370f4205"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "1cdd872b-594c-815e-bc5c-0002370f4205"
+  },
+  "last_edited_time": "2025-06-25T21:11:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Carrier Access Deactivation Tracker",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Carrier Access Deactivation Tracker",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Notes": {
+      "id": "%3ATm_",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Admin Access Required?": {
+      "id": "O%3BQg",
+      "name": "Admin Access Required?",
+      "description": null,
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "Deactivation Method": {
+      "id": "SqWK",
+      "name": "Deactivation Method",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Portal/System Name": {
+      "id": "%5CBT%3C",
+      "name": "Portal/System Name",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Date Deactivated": {
+      "id": "%5Cmst",
+      "name": "Date Deactivated",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Handled By": {
+      "id": "dkLP",
+      "name": "Handled By",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Status": {
+      "id": "h%60eA",
+      "name": "Status",
+      "description": null,
+      "type": "status",
+      "status": {
+        "options": [
+          {
+            "id": "4f4c2cfc-24dc-4063-981b-81f1a9091107",
+            "name": "Not started",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "12e1fdfd-9cb7-4b37-a8aa-89176ce2ec1c",
+            "name": "In progress",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "5881012e-cc9a-4f42-9af4-dbe0428e5c10",
+            "name": "Done",
+            "color": "green",
+            "description": null
+          }
+        ],
+        "groups": [
+          {
+            "id": "76430d64-a5fc-4945-923a-5cdfc09bba12",
+            "name": "To-do",
+            "color": "gray",
+            "option_ids": [
+              "4f4c2cfc-24dc-4063-981b-81f1a9091107"
+            ]
+          },
+          {
+            "id": "b051e5bb-c316-4602-9363-7f098cb7afd4",
+            "name": "In progress",
+            "color": "blue",
+            "option_ids": [
+              "12e1fdfd-9cb7-4b37-a8aa-89176ce2ec1c"
+            ]
+          },
+          {
+            "id": "bd0392d2-7ed6-4b7e-b2ee-68bf74c63245",
+            "name": "Complete",
+            "color": "green",
+            "option_ids": [
+              "5881012e-cc9a-4f42-9af4-dbe0428e5c10"
+            ]
+          }
+        ]
+      }
+    },
+    "Files & media": {
+      "id": "q%3A%5Dl",
+      "name": "Files & media",
+      "description": null,
+      "type": "files",
+      "files": {}
+    },
+    "Carrier/Partner Name": {
+      "id": "title",
+      "name": "Carrier/Partner Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "database_id",
+    "database_id": "109abcb1-dcc4-8071-8596-d7f96279d75c"
+  },
+  "url": "https://www.notion.so/1f8abcb1dcc4804a91fed8e0eeb7b299",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "4c00c62a-3b38-438b-b030-98ba67df394a"
+}

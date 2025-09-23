@@ -1,0 +1,206 @@
+{
+  "object": "database",
+  "id": "23aabcb1-dcc4-8143-b405-d1e1ec13bbc8",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-07-24T20:56:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "206d872b-594c-8149-a552-00029b661a19"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "206d872b-594c-8149-a552-00029b661a19"
+  },
+  "last_edited_time": "2025-07-24T23:18:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Risk Agency Carriers",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Risk Agency Carriers",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Portal Available": {
+      "id": "%40Nax",
+      "name": "Portal Available",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "5bacfbe3-ec7a-4d25-92a8-d73592e178c1",
+            "name": "YES Create Login",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "44d782bf-1423-463a-bbd3-db7df80fd363",
+            "name": "No Move on.",
+            "color": "brown",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Partner Type": {
+      "id": "DPnr",
+      "name": "Partner Type",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "f2534d70-bb2b-4f73-b128-730c305e4a32",
+            "name": "Broker",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "ec5e2828-378a-456e-9906-8e15a076f759",
+            "name": "Carrier",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "9e851dec-69c9-4a67-b597-a4b720831b60",
+            "name": "MGA",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "fc8f2697-9b1a-451c-a90e-421c4a719543",
+            "name": "Multi-Rater",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "2ad36210-2520-4e24-ab45-09d6fcb48227",
+            "name": "Holding Company",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "30e39b07-12a4-4fdc-8961-5daee1371adb",
+            "name": "Independent Agency",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "0201a7db-5bfb-45c7-b2e9-d754dc3d32e6",
+            "name": "Carrier - enrolls into more",
+            "color": "pink",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Attach Enrollment": {
+      "id": "NugJ",
+      "name": "Attach Enrollment",
+      "description": null,
+      "type": "files",
+      "files": {}
+    },
+    "Priority": {
+      "id": "XxEV",
+      "name": "Priority",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "286db7c4-726d-447c-9476-65921bf5f7fa",
+            "name": "high",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "3b7f2eee-94f1-44ac-a2b6-13c3309aeb14",
+            "name": "medium",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "28cbc40f-c9db-4f6f-86dc-e1444d9c13df",
+            "name": "low",
+            "color": "default",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Admin login": {
+      "id": "ZUHb",
+      "name": "Admin login",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "19276ac4-5631-4e77-be0f-cbb1cbf35c3c",
+            "name": "Joey",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "75a03355-770f-44d6-a825-e345750dcf7a",
+            "name": "Katrina",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "e2326b55-b712-4d8c-8bc3-07808da7ef4a",
+            "name": "Risk Ops",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Notes": {
+      "id": "tf%3Du",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Enrolled ": {
+      "id": "%7Ch%3Ed",
+      "name": "Enrolled ",
+      "description": null,
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "23aabcb1-dcc4-80b4-9acf-f1f1eef32cfe"
+  },
+  "url": "https://www.notion.so/23aabcb1dcc48143b405d1e1ec13bbc8",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "3b6620b2-1ed4-4514-812e-171f96cabd96"
+}

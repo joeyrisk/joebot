@@ -1,0 +1,137 @@
+{
+  "object": "database",
+  "id": "24babcb1-dcc4-80a8-9b52-c1031820c9ac",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-08-10T23:27:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:13:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Change Log",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Change Log",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Carrier": {
+      "id": "P%3CG_",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Change Log",
+          "synced_property_id": "RQSU"
+        }
+      }
+    },
+    "Date": {
+      "id": "SNvg",
+      "name": "Date",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Changed By": {
+      "id": "cO%3DO",
+      "name": "Changed By",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Area": {
+      "id": "nXxs",
+      "name": "Area",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "0ed9a879-1dac-4c62-966f-9d82efb6524e",
+            "name": "Appetite",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "j|zf",
+            "name": "Billing",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": ":ixY",
+            "name": "Claims",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "@E_A",
+            "name": "Contacts",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "dHIR",
+            "name": "Forms",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "gxVQ",
+            "name": "Other",
+            "color": "yellow",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Detail": {
+      "id": "%7CHS%7C",
+      "name": "Detail",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Change Summary": {
+      "id": "title",
+      "name": "Change Summary",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/24babcb1dcc480a89b52c1031820c9ac",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "0854004c-3467-40d7-b57f-d089af4aebcb"
+}

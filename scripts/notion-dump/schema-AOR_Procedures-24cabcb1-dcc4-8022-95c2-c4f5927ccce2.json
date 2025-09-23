@@ -1,0 +1,177 @@
+{
+  "object": "database",
+  "id": "24cabcb1-dcc4-8022-95c2-c4f5927ccce2",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-08-11T04:12:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:14:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "AOR Procedures",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "AOR Procedures",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Notes": {
+      "id": "%40w%3Ap",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Page Owner": {
+      "id": "O%3DLe",
+      "name": "Page Owner",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Required Docs": {
+      "id": "QDpV",
+      "name": "Required Docs",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "sfDB",
+            "name": "ACORD",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "u{xM",
+            "name": "Carrier Form",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "_X~e",
+            "name": "Letterhead",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Last Verified": {
+      "id": "ZK%7Bf",
+      "name": "Last Verified",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Submission Method": {
+      "id": "%60W%5Em",
+      "name": "Submission Method",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "qlBe",
+            "name": "Email Underwriter",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "?=YB",
+            "name": "Email Mailbox",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "~sY`",
+            "name": "Portal Upload",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "NWAk",
+            "name": "Fax",
+            "color": "orange",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Line of Business": {
+      "id": "giqL",
+      "name": "Line of Business",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8069-ac75-f0d47e991a36",
+        "data_source_id": "24babcb1-dcc4-80ba-89dc-000b05e4f9c9",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "AOR Procedures",
+          "synced_property_id": "~zdc"
+        }
+      }
+    },
+    "SLA (days)": {
+      "id": "zpQL",
+      "name": "SLA (days)",
+      "description": null,
+      "type": "number",
+      "number": {
+        "format": "number"
+      }
+    },
+    "Carrier": {
+      "id": "%7C%3Cqc",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "AOR Procedures",
+          "synced_property_id": "MJ%3DB"
+        }
+      }
+    },
+    "_Hidden": {
+      "id": "title",
+      "name": "_Hidden",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/24cabcb1dcc4802295c2c4f5927ccce2",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "d5152981-a6e0-4e41-9763-df4bd648e973"
+}

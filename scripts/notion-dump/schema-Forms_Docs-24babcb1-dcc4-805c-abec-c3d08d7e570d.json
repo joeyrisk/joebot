@@ -1,0 +1,221 @@
+{
+  "object": "database",
+  "id": "24babcb1-dcc4-805c-abec-c3d08d7e570d",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-08-10T23:34:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:13:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Forms & Docs",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Forms & Docs",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Line of Business": {
+      "id": "%3F%60%7CO",
+      "name": "Line of Business",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8069-ac75-f0d47e991a36",
+        "data_source_id": "24babcb1-dcc4-80ba-89dc-000b05e4f9c9",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Forms & Docs",
+          "synced_property_id": "dfB_"
+        }
+      }
+    },
+    "Notes": {
+      "id": "F%7C%5C%5D",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "URL": {
+      "id": "Ku%3AE",
+      "name": "URL",
+      "description": null,
+      "type": "url",
+      "url": {}
+    },
+    "File": {
+      "id": "MeMc",
+      "name": "File",
+      "description": null,
+      "type": "files",
+      "files": {}
+    },
+    "Carrier": {
+      "id": "%60Pw%40",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Forms & Docs",
+          "synced_property_id": "s%5Ee%5B"
+        }
+      }
+    },
+    "Effective Date": {
+      "id": "aY%3Bd",
+      "name": "Effective Date",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Last Verfiied": {
+      "id": "g%3BhV",
+      "name": "Last Verfiied",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Department": {
+      "id": "reFn",
+      "name": "Department",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "7715669e-bdd8-458a-b758-80cc074a1022",
+            "name": "Sales",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "f49890c4-c111-4b53-92a9-54edb29c3e1d",
+            "name": "Service",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "45457e74-e997-4a1e-8578-0c14fcd3001d",
+            "name": "HR",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "be359f5a-7812-41da-a171-ee9a23e3048e",
+            "name": "Operations",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "5f8c5f83-d0a5-4fb9-bca5-45ed288bb10e",
+            "name": "Finance",
+            "color": "orange",
+            "description": null
+          }
+        ]
+      }
+    },
+    "IVANS": {
+      "id": "wbGf",
+      "name": "IVANS",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24cabcb1-dcc4-8064-9075-cc7ffec03748",
+        "data_source_id": "24cabcb1-dcc4-809a-bcc2-000b46299c81",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Job Aid Doc",
+          "synced_property_id": "v%40Eo"
+        }
+      }
+    },
+    "Type": {
+      "id": "%7Beaa",
+      "name": "Type",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "JfrV",
+            "name": "Training",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "IUjZ",
+            "name": "Guide",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "ZSG]",
+            "name": "Cancellation",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "LF@v",
+            "name": "Endorsement",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "}]NX",
+            "name": "Supplemental",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "EpL_",
+            "name": "Application",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Document Name": {
+      "id": "title",
+      "name": "Document Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/24babcb1dcc4805cabecc3d08d7e570d",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "53ad38af-7571-42af-b01e-2fd4c566f426"
+}

@@ -1,0 +1,179 @@
+{
+  "object": "database",
+  "id": "1f9abcb1-dcc4-8047-b064-e0bb143a8cab",
+  "cover": null,
+  "icon": {
+    "type": "emoji",
+    "emoji": "➗"
+  },
+  "created_time": "2025-05-20T20:32:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "130d872b-594c-81b1-afc4-00022cc28078"
+  },
+  "last_edited_time": "2025-05-21T22:26:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Average Rates by  City/County/Region/State",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Average Rates by  City/County/Region/State",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Construction Type": {
+      "id": "%3Bqh%40",
+      "name": "Construction Type",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "595c50fd-4a30-4856-9935-d81f245228c5",
+            "name": "JM",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "92e5eed2-da34-41c3-a614-dfd7e885b336",
+            "name": "Frame",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "8b0f6c06-8b8d-4f00-bb8d-b45e8a62ea7b",
+            "name": "MNC",
+            "color": "blue",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Rate Per $100": {
+      "id": "%3DbZm",
+      "name": "Rate Per $100",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "TIV Range": {
+      "id": "%40pVI",
+      "name": "TIV Range",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Market Type": {
+      "id": "F%5Exk",
+      "name": "Market Type",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "1c998720-7d63-4f8d-9b0c-6e5aa0ee4b1a",
+            "name": "E&S",
+            "color": "orange",
+            "description": null
+          }
+        ]
+      }
+    },
+    "City/County/Region": {
+      "id": "MIYt",
+      "name": "City/County/Region",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Source/Broker": {
+      "id": "OBUU",
+      "name": "Source/Broker",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Submitted By": {
+      "id": "Q%3EMh",
+      "name": "Submitted By",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Market Notes": {
+      "id": "Wi%5CC",
+      "name": "Market Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Last Updated": {
+      "id": "gO%40O",
+      "name": "Last Updated",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Occupancy/Use Class": {
+      "id": "wKlh",
+      "name": "Occupancy/Use Class",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "efef731d-bc19-4fcf-a32d-6e5e0937b39c",
+            "name": "Apartments",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "de1e7a46-86b4-409d-9ffb-2245ec18c0c2",
+            "name": "LRO",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "3834579f-5b35-4dd3-b9f5-2400e8da7f81",
+            "name": "Habitational",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "State": {
+      "id": "title",
+      "name": "State",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "1f9abcb1-dcc4-80fc-8909-dd01b7fa5dc4"
+  },
+  "url": "https://www.notion.so/1f9abcb1dcc48047b064e0bb143a8cab",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "b1a1ecb0-6215-4613-a853-fe3d804ef9d5"
+}

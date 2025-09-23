@@ -1,0 +1,74 @@
+{
+  "object": "database",
+  "id": "1deabcb1-dcc4-80e5-be96-d1badab4c4dc",
+  "cover": null,
+  "icon": {
+    "type": "emoji",
+    "emoji": "🍻"
+  },
+  "created_time": "2025-04-23T01:55:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-06-04T02:07:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Renewal Script Library",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Renewal Script Library",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Line of Business": {
+      "id": "OqCv",
+      "name": "Line of Business",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "891947c6-a9c6-4942-96b4-400efdb9f936",
+            "name": "All",
+            "color": "blue",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "block_id",
+    "block_id": "bdcb2ae7-a13a-45d6-8a18-e5f0604a59e5"
+  },
+  "url": "https://www.notion.so/1deabcb1dcc480e5be96d1badab4c4dc",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "987e4916-3030-4e6c-993f-e2cdad61c488"
+}

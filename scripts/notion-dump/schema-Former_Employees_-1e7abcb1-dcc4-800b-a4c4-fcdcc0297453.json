@@ -1,0 +1,213 @@
+{
+  "object": "database",
+  "id": "1e7abcb1-dcc4-800b-a4c4-fcdcc0297453",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-05-02T20:18:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-05-06T17:57:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Former Employees ",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Former Employees ",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Status": {
+      "id": "UbE_",
+      "name": "Status",
+      "description": null,
+      "type": "status",
+      "status": {
+        "options": [
+          {
+            "id": "e60fdf3a-0e3d-4fb5-9e33-40e8cb5a5836",
+            "name": "Not started",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "652e6496-2e80-4265-9d7d-778166a559ef",
+            "name": "In progress",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "fffcd1cc-e619-40cd-a167-5488eb894c68",
+            "name": "Done",
+            "color": "green",
+            "description": null
+          }
+        ],
+        "groups": [
+          {
+            "id": "fd5d5493-c5e5-41f2-8baa-448848ca1205",
+            "name": "To-do",
+            "color": "gray",
+            "option_ids": [
+              "e60fdf3a-0e3d-4fb5-9e33-40e8cb5a5836"
+            ]
+          },
+          {
+            "id": "16c44709-62ed-4ce9-bb22-caa8db2a6060",
+            "name": "In progress",
+            "color": "blue",
+            "option_ids": [
+              "652e6496-2e80-4265-9d7d-778166a559ef"
+            ]
+          },
+          {
+            "id": "2909f7f4-ef14-4d40-9812-f5c3c55ddc55",
+            "name": "Complete",
+            "color": "green",
+            "option_ids": [
+              "fffcd1cc-e619-40cd-a167-5488eb894c68"
+            ]
+          }
+        ]
+      }
+    },
+    "Manager": {
+      "id": "XSFu",
+      "name": "Manager",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Last Day": {
+      "id": "nj%3EY",
+      "name": "Last Day",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Exit Classification": {
+      "id": "rRhF",
+      "name": "Exit Classification",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "rcfc",
+            "name": "Terminated",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "gXhA",
+            "name": "Resigned",
+            "color": "blue",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    },
+    "Work Email": {
+      "id": "564b57bb-206e-4137-9c1a-98646525e097",
+      "name": "Work Email",
+      "description": null,
+      "type": "email",
+      "email": {}
+    },
+    "Calendly Link": {
+      "id": "99b91b4f-add5-4c82-8eca-56544debdc08",
+      "name": "Calendly Link",
+      "description": null,
+      "type": "url",
+      "url": {}
+    },
+    "Department": {
+      "id": "a2fee5a1-9997-40c0-a5c2-949d1ace2153",
+      "name": "Department",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "KWLL",
+            "name": "Administration",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "NYMe",
+            "name": "HR",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "khQ[",
+            "name": "Management",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "LTNr",
+            "name": "Sales",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "gOiu",
+            "name": "Service",
+            "color": "green",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Job Title": {
+      "id": "eff97be8-b9ad-4dc2-9767-20e47729ad02",
+      "name": "Job Title",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Direct Line": {
+      "id": "f44747dc-49c5-4836-995a-fb9cc9d067e3",
+      "name": "Direct Line",
+      "description": null,
+      "type": "phone_number",
+      "phone_number": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "1e7abcb1-dcc4-8063-8d2e-e80f3328d483"
+  },
+  "url": "https://www.notion.so/1e7abcb1dcc4800ba4c4fcdcc0297453",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "86c13d3a-2d00-45b4-bbed-ccfe1603ab4a"
+}

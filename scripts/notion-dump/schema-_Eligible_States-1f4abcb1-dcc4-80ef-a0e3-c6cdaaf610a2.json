@@ -1,0 +1,90 @@
+{
+  "object": "database",
+  "id": "1f4abcb1-dcc4-80ef-a0e3-c6cdaaf610a2",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-05-15T18:50:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "1cdd872b-594c-815e-bc5c-0002370f4205"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "1cdd872b-594c-815e-bc5c-0002370f4205"
+  },
+  "last_edited_time": "2025-06-17T18:55:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "🗺️ Eligible States",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "🗺️ Eligible States",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Launch Status": {
+      "id": "J%60ap",
+      "name": "Launch Status",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "o_>u",
+            "name": "🚫 Not available",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "UiUp",
+            "name": "🔜 Future potential",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "EaSr",
+            "name": "✅ Current availability",
+            "color": "gray",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Open for Business": {
+      "id": "s%40F%5E",
+      "name": "Open for Business",
+      "description": null,
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "State": {
+      "id": "title",
+      "name": "State",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "block_id",
+    "block_id": "1f4abcb1-dcc4-800f-9334-f7ebb732e432"
+  },
+  "url": "https://www.notion.so/1f4abcb1dcc480efa0e3c6cdaaf610a2",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "92bb05ea-f01c-488f-9e4f-1c15a1966d2d"
+}

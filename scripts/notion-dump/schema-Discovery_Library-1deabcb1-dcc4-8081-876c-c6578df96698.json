@@ -1,0 +1,163 @@
+{
+  "object": "database",
+  "id": "1deabcb1-dcc4-8081-876c-c6578df96698",
+  "cover": null,
+  "icon": {
+    "type": "emoji",
+    "emoji": "🔍"
+  },
+  "created_time": "2025-04-23T01:52:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-04-25T02:26:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Discovery Library",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Discovery Library",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Use In JoeBot": {
+      "id": "RKki",
+      "name": "Use In JoeBot",
+      "description": null,
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "Category": {
+      "id": "XCkD",
+      "name": "Category",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "2893f18d-5bcd-4e11-9c32-eecfd985ef16",
+            "name": "Industry",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "474b6521-bb38-49c5-8604-c95847fd0ff5",
+            "name": "LOB",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "2a4d434c-35a7-49ec-a0ab-2eb6b3d8ac5f",
+            "name": "Universal",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "cf2e7f02-c785-457e-983b-185117371527",
+            "name": "Training",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "77262bf6-8b0a-4fbd-9707-a0ee22c09c3f",
+            "name": "Messaging",
+            "color": "default",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Line of Business": {
+      "id": "fn%7C%7B",
+      "name": "Line of Business",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "6b778b4e-390e-4619-85f3-5fbd25b51376",
+            "name": "Auto",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "38164a5c-4c3e-4c9b-9e35-b6f1cbb9ba5b",
+            "name": "BR",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "45074673-1429-4b43-8f03-4c07f5ea3ffd",
+            "name": "BOP",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "2d05f5fd-0a1f-4457-a42e-a21444ebfa8b",
+            "name": "Cyber",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "e67e9549-fd3d-40c2-a5ce-574ef9796772",
+            "name": "EPLI",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "9233941d-6917-448c-8d44-5aae280ec8bd",
+            "name": "GL",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "db49cb7e-6694-49a0-bca3-a5565f1f0fc4",
+            "name": "Property",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "c07c1934-f948-4f54-b449-b708ba1d64ee",
+            "name": "WC",
+            "color": "gray",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Industry or LOB Type": {
+      "id": "title",
+      "name": "Industry or LOB Type",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "block_id",
+    "block_id": "1deabcb1-dcc4-8159-ab7c-e4861659ca4b"
+  },
+  "url": "https://www.notion.so/1deabcb1dcc48081876cc6578df96698",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "67886544-ac40-44cd-a200-7ee035968493"
+}

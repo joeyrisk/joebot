@@ -1,0 +1,457 @@
+{
+  "object": "database",
+  "id": "1a5abcb1-dcc4-81a4-af34-fd482e85f4df",
+  "cover": null,
+  "icon": {
+    "type": "external",
+    "external": {
+      "url": "https://www.notion.so/icons/checkmark_red.svg"
+    }
+  },
+  "created_time": "2025-02-25T15:54:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-02-25T15:55:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Tasks [UT]",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Tasks [UT]",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Description": {
+      "id": "%3C%5ERn",
+      "name": "Description",
+      "description": "A simple text property for adding a note about this task.\n\nIf you've added the Notion AI add-on to your workspace, you can turn AI Autofill on to generate a summary of the task's details (provided there's a full description in the task's page body).",
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Priority": {
+      "id": "%3C_Wg",
+      "name": "Priority",
+      "description": "Priority level for your task. By default, this value only matters in the special Priority View. Priority doesn't affect task sorting or visibility in other views – but you can add Priority filters or grouping to them if you want.",
+      "type": "status",
+      "status": {
+        "options": [
+          {
+            "id": "065d708c-63c9-4e5d-baf8-d172e7dd2f7f",
+            "name": "Low",
+            "color": "default",
+            "description": "For low-priority tasks."
+          },
+          {
+            "id": "3444e180-58ef-476c-baa8-c7345928edff",
+            "name": "Medium",
+            "color": "green",
+            "description": "For medium-priority tasks."
+          },
+          {
+            "id": "8b759384-b1e7-43a0-adf0-be6e44123d88",
+            "name": "High",
+            "color": "red",
+            "description": "For high-priority tasks."
+          }
+        ],
+        "groups": [
+          {
+            "id": "14d83c60-d524-43d1-b701-7865b37be266",
+            "name": "To-do",
+            "color": "gray",
+            "option_ids": []
+          },
+          {
+            "id": "0312304e-de59-4c4f-bbfd-6a95418e5ca0",
+            "name": "In progress",
+            "color": "blue",
+            "option_ids": [
+              "065d708c-63c9-4e5d-baf8-d172e7dd2f7f",
+              "3444e180-58ef-476c-baa8-c7345928edff",
+              "8b759384-b1e7-43a0-adf0-be6e44123d88"
+            ]
+          },
+          {
+            "id": "44dbb7d9-3f05-4b0f-b3ee-47c4682a672e",
+            "name": "Complete",
+            "color": "green",
+            "option_ids": []
+          }
+        ]
+      }
+    },
+    "Recur Interval": {
+      "id": "G~K%3B",
+      "name": "Recur Interval",
+      "description": "How often to make a recurring task recur. By default, this interval is a number of days -e.g an interval of 2 make Next Due two days from Due (or today's date). You can set a Recur Unit to adjust this.",
+      "type": "number",
+      "number": {
+        "format": "number"
+      }
+    },
+    "Parent Task": {
+      "id": "HebF",
+      "name": "Parent Task",
+      "description": "If the current page is a sub-task, its parent task page will be shown here.\n\nThis property is a Relation which connects to another property inside this same Tasks database.",
+      "type": "relation",
+      "relation": {
+        "database_id": "1a5abcb1-dcc4-81a4-af34-fd482e85f4df",
+        "data_source_id": "1a5abcb1-dcc4-811e-b1e3-000b543bb3b3",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Sub-Tasks",
+          "synced_property_id": "uF_f"
+        }
+      }
+    },
+    "Sub-Task Sorter": {
+      "id": "IoEC",
+      "name": "Sub-Task Sorter",
+      "description": "Used in Projects, alongside Due Stamp (Parent), to ensure that sub-tasks are sorted correctly beneath their parent tasks.",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\tsubSeedName,\n\tif(\n\t\t!{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\t{{notion:block_property:title:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.lower(),\n\t\t{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.first().format().lower()\n\t),\n\tsubSeed,\n\tif(\n\t\t!{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\t1,\n\t\t2\n\t),\n\ttaskStatus,\n\tif(\n\t\t{{notion:block_property:oHKB:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} == \"Done\" or {{notion:block_property:oHKB:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} == {{notion:block_property:MI%3A%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.at(2).last(),\n\t\t2,\n\t\t1\n\t),\n\ttaskStatus + \" - \" + subSeedName + \" - \" + subSeed\n)"
+      }
+    },
+    "Due Stamp (Parent)": {
+      "id": "MAIz",
+      "name": "Due Stamp (Parent)",
+      "description": "If a task is sub-task, this returns the Due Timestamp value of its parent task. Otherwise, it simply returns this task's own Due Timestamp value.\n\nThis property is the highest-priority sorting criteria for Task views within Projects. It keeps sub-tasks beneath their parent tasks.",
+      "type": "formula",
+      "formula": {
+        "expression": "!{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t? {{notion:block_property:rfZd:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t: {{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.first().{{notion:block_property:rfZd:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}"
+      }
+    },
+    "Localization Key": {
+      "id": "MI%3A%60",
+      "name": "Localization Key",
+      "description": "This property allows you to localize your template. If you want to translate the option names in the Days, Recur Unit, and Status properties, you can do so and then change the arrays in this formula to the same values.\n\nThis will allow formulas to keep working.",
+      "type": "formula",
+      "formula": {
+        "expression": "[\n/* Rewrite these weekday and recur unit options in your own language, so your second brain can work even better with your first. Make sure to set up the same options in the \"Recur Unit\" and \"Days\" properties afterward, so you can select them. Feel free to remove the original names afterward! */\n\n/* [\"lunes\", \"3ª\", \"mercredi\", \"木曜日\", \"piątek\", \"lørdag\", \"Double Sunday\"] */\n[\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"],\n\n/* [\"Day(s)\", \"Week(s)\", \"Month(s)\", \"Year(s)\", \"Month(s) on the Last Day\", \"Month(s) on the First Weekday\", \"Month(s) on the Last Weekday\", \"Nth Weekday of Month\"] */\n[\"Day(s)\", \"Week(s)\", \"Month(s)\", \"Year(s)\", \"Month(s) on the Last Day\", \"Month(s) on the First Weekday\", \"Month(s) on the Last Weekday\", \"Nth Weekday of Month\"],\n\n/* This final list is for Status option names. */\n[\"To Do\", \"Doing\", \"Done\"]\n]"
+      }
+    },
+    "Recur Unit": {
+      "id": "NE%3Em",
+      "name": "Recur Unit",
+      "description": "Sets the unit of time that will be used by Recur Interval to set Next Due. E.g. if you set Week(s) here, then a Recur Interval of 2 will set a task to recur every 2 weeks.",
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "fcb6305f-e1dc-499c-857e-c381cb7240df",
+            "name": "Day(s)",
+            "color": "blue",
+            "description": "Recur by days.\n\nExample: If Recur Interval is 3, the task recurs every 3 days.\n\nIf you want a task to recur on specific days of the week, set Recur Interval to 1, then choose specific days in the Days property."
+          },
+          {
+            "id": "a3574ba5-ea77-4381-9113-97b16d9294ee",
+            "name": "Week(s)",
+            "color": "blue",
+            "description": "Recur by weeks.\n\nExample: If Recur Interval is 3, the task recurs every 3 weeks.\n\nIf you want a task to recur during a specific week of each month, use the \"Nth Weekday of Month\" option instead."
+          },
+          {
+            "id": "f0e45d83-1881-4c71-982c-28c0bf9fe90b",
+            "name": "Month(s)",
+            "color": "blue",
+            "description": "Recur by months.\n\nExample: If Recur Interval is 2, the task recurs every other month.\n\nTip: Use a Recur Interval of 3 to create a \"Quarterly\" recur schedule."
+          },
+          {
+            "id": "5170adfb-fe8c-4c06-acc5-ba335fb169e7",
+            "name": "Month(s) on the First Weekday",
+            "color": "blue",
+            "description": "Recur by months, always on the first weekday of the month (Mon, Tues, Weds, Thurs, or Fri)."
+          },
+          {
+            "id": "e7204ca1-379d-449f-89ed-5d4971322c4a",
+            "name": "Month(s) on the Last Weekday",
+            "color": "blue",
+            "description": "Recur by months, always on the last weekday of the month (Mon, Tues, Weds, Thurs, or Fri)."
+          },
+          {
+            "id": "345f7bd7-2636-4900-9a62-51e8756dfd39",
+            "name": "Month(s) on the Last Day",
+            "color": "blue",
+            "description": "Recur by months, always on the last day of the month.\n\nExample: If Recur Interval is 2, and Due is December 31, Next Due will be February 28 (or 29 on a leap year)."
+          },
+          {
+            "id": "f991f024-ff5e-4a25-95ef-c0672a2b6c92",
+            "name": "Year(s)",
+            "color": "blue",
+            "description": "Recur by years.\n\nExample: If Recur Interval is 2, the task recurs every 2 years."
+          },
+          {
+            "id": ";d@?",
+            "name": "Nth Weekday of Month",
+            "color": "blue",
+            "description": "E.g. \"3rd Thurs of the Month\". (Weekend days work too)\n\nThis option only works if Days property is set, and only when Days has a SINGLE value.\n\nFor the example above, Recur Interval = 3, Days = Thursday.\n\nSet Recur Interval to 1 for first week of month, 5 for last week of month."
+          }
+        ]
+      }
+    },
+    "Smart List": {
+      "id": "PIZR",
+      "name": "Smart List",
+      "description": "Allows you to apply special \"tags\" to a task. By default, the only value is \"Someday\".\n\nTasks marked as Someday will show in the Someday View, and they will be hidden from the Inbox even if they don't have a Project assigned.",
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "08992c1f-9660-4f45-b4b4-4a99163ea21d",
+            "name": "Someday",
+            "color": "red",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Project Active": {
+      "id": "TQs%5B",
+      "name": "Project Active",
+      "description": "This property shows whether this task's project is active (either Doing or Ongoing). Used for views that only show tasks within projects that are active – helpful for filtering out tasks in projects that are planned, but not yet in progress.",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\tproject,\n\tif(\n\t\t{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\t{{notion:block_property:HebF:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.first().{{notion:block_property:jbTO:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.first(),\n\t\t{{notion:block_property:jbTO:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.first()\n\t),\n\tprojectStatus,\n\tproject.{{notion:block_property:f%3EZ%5B:1a5abcb1-dcc4-81f0-929d-dc331fc0cc7c:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\tprojectLocalizationKey,\n\tproject.{{notion:block_property:rKDS:1a5abcb1-dcc4-81f0-929d-dc331fc0cc7c:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\tif(\n\t\tprojectStatus == \"Doing\" \n\t\tor projectStatus == \"Ongoing\"\n\t\tor projectLocalizationKey.at(1).includes(projectStatus),\n\t\ttrue,\n\t\tfalse\n\t)\n)"
+      }
+    },
+    "Next Due": {
+      "id": "%5EKYS",
+      "name": "Next Due",
+      "description": "The \"next due\" date for the task if it is recurring. A date will show here once you have values set in the Due and Recur Interval properties. \n\nThe date is calculated the Due date, today's date, and the values in Recur Interval, Recur Unit, and Days (Only if Set to 1 Day(s)).",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\tversion, \"2.2.1\",\n\t\n\tdueProp, {{notion:block_property:lQh%3C:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\n\trecurIntervalProp, {{notion:block_property:G~K%3B:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\n\trecurUnitProp, {{notion:block_property:NE%3Em:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\n\tlocalizationKeyProp, {{notion:block_property:MI%3A%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\n\tdaysProp, {{notion:block_property:_%3CZn:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}},\n\t\n\temptyDate, parseDate(\"\"),\n\t\n\tif(!empty(recurIntervalProp) and !empty(dueProp),\n\t\tif(recurIntervalProp > 0 and recurIntervalProp == ceil(recurIntervalProp),\n\t\t\tlets(\n\t\t\t\trecurUnit,\n\t\t\t\t\tifs(\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 0), recurUnitProp == \"Day(s)\"), \"days\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 1), recurUnitProp == \"Week(s)\"), \"weeks\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 2), recurUnitProp == \"Month(s)\"), \"months\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 3), recurUnitProp == \"Year(s)\"), \"years\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 4), recurUnitProp == \"Month(s) on the Last Day\"), \"monthsonthelastday\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 5), recurUnitProp == \"Month(s) on the First Weekday\"), \"monthsonthefirstweekday\",\n\t\t\t\t\t\tor(recurUnitProp == at(at(localizationKeyProp, 1), 6), recurUnitProp == \"Month(s) on the Last Weekday\"), \"monthsonthelastweekday\",\n\t\t\t\t\t\tor(and(!empty(at(at(localizationKeyProp, 1), 7)), recurUnitProp == at(at(localizationKeyProp, 1), 7)), recurUnitProp == \"Nth Weekday of Month\"), \"nthweekdayofmonth\",\n\t\t\t\t\t\t\"days\"\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tweekdays,\n\t\t\t\t\tmatch(\n\t\t\t\t\t\t[\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 1 - 1)), includes(daysProp, \"Monday\")), 1, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 2 - 1)), includes(daysProp, \"Tuesday\")), 2, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 3 - 1)), includes(daysProp, \"Wednesday\")), 3, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 4 - 1)), includes(daysProp, \"Thursday\")), 4, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 5 - 1)), includes(daysProp, \"Friday\")), 5, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 6 - 1)), includes(daysProp, \"Saturday\")), 6, false),\n\t\t\t\t\t\t\tif(or(includes(daysProp, at(at(localizationKeyProp, 0), 7 - 1)), includes(daysProp, \"Sunday\")), 7, false)\n\t\t\t\t\t\t],\n\t\t\t\t\t\t\"[1-7]\"\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tdateDue, parseDate(formatDate(dueProp, \"YYYY-MM-DD\")),\n\t\t\t\t\n\t\t\t\ttimeNow, now(),\n\t\t\t\t\n\t\t\t\tdateNow, parseDate(formatDate(timeNow, \"YYYY-MM-DD\")),\n\t\t\t\t\n\t\t\t\thasRange, dateEnd(dueProp) > dateStart(dueProp),\n\t\t\t\t\n\t\t\t\trecurUnitLapseLength,\n\t\t\t\t\tif(\n\t\t\t\t\t\tincludes([\"days\", \"weeks\", \"months\", \"years\"], recurUnit),\n\t\t\t\t\t\tdateBetween(dateNow, dateDue, recurUnit) / recurIntervalProp,\n\t\t\t\t\t\tfalse\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tlastDayBaseDate,\n\t\t\t\t\tif(\n\t\t\t\t\t\tincludes([\"monthsonthelastday\", \"monthsonthefirstweekday\", \"monthsonthelastweekday\"], recurUnit),\n\t\t\t\t\t\tif(\n\t\t\t\t\t\t\tyear(dateNow) * 12 + month(dateNow) - (year(dateDue) * 12 + month(dateDue)) > 0,\n\t\t\t\t\t\t\tdateSubtract(dateAdd(dateSubtract(dateAdd(dateDue, ceil((year(dateNow) * 12 + month(dateNow) - (year(dateDue) * 12 + month(dateDue))) / recurIntervalProp) * recurIntervalProp, \"months\"), date(dateAdd(dateDue, ceil((year(dateNow) * 12 + month(dateNow) - (year(dateDue) * 12 + month(dateDue))) / recurIntervalProp) * recurIntervalProp, \"months\")) - 1, \"days\"), 1, \"months\"), 1, \"days\"),\n\t\t\t\t\t\t\tdateSubtract(dateAdd(dateSubtract(dateAdd(dateDue, recurIntervalProp, \"months\"), date(dateAdd(dateDue, recurIntervalProp, \"months\")) - 1, \"days\"), 1, \"months\"), 1, \"days\")\n\t\t\t\t\t\t),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tfirstDayBaseDate,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tdateSubtract(lastDayBaseDate, date(lastDayBaseDate) - 1, \"days\"),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tfirstWeekdayBaseDate,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tif(\n\t\t\t\t\t\t\ttest(day(firstDayBaseDate), \"6|7\"), \n\t\t\t\t\t\t\tdateAdd(firstDayBaseDate, 8 - day(firstDayBaseDate), \"days\"),\n\t\t\t\t\t\t\tfirstDayBaseDate\n\t\t\t\t\t\t),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tlastWeekdayBaseDate,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tif(\n\t\t\t\t\t\t\ttest(day(lastDayBaseDate), \"6|7\"), \n\t\t\t\t\t\t\tdateSubtract(lastDayBaseDate, day(lastDayBaseDate) - 5, \"days\"),\n\t\t\t\t\t\t\tlastDayBaseDate\n\t\t\t\t\t\t),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tnextLastBaseDate,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tdateSubtract(dateAdd(dateSubtract(dateAdd(lastDayBaseDate, recurIntervalProp, \"months\"), date(dateAdd(lastDayBaseDate, recurIntervalProp, \"months\")) - 1, \"days\"), 1, \"months\"), 1, \"days\"),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tnextFirstBaseDate,\n\t\t\t\tif(\n\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\tdateSubtract(nextLastBaseDate, date(nextLastBaseDate) - 1, \"days\"),\n\t\t\t\t\temptyDate\n\t\t\t\t),\n\t\t\t\t\n\t\t\t\tnextFirstWeekday,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tif(\n\t\t\t\t\t\t\ttest(day(nextFirstBaseDate), \"6|7\"), \n\t\t\t\t\t\t\tdateAdd(nextFirstBaseDate, 8 - day(nextFirstBaseDate), \"days\"),\n\t\t\t\t\t\t\tnextFirstBaseDate\n\t\t\t\t\t\t),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tnextLastWeekday,\n\t\t\t\t\tif(\n\t\t\t\t\t\tlastDayBaseDate != emptyDate,\n\t\t\t\t\t\tif(\n\t\t\t\t\t\t\ttest(day(nextLastBaseDate), \"6|7\"), \n\t\t\t\t\t\t\tdateSubtract(nextLastBaseDate, day(nextLastBaseDate) - 5, \"days\"),\n\t\t\t\t\t\t\tnextLastBaseDate\n\t\t\t\t\t\t),\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tfirstWeekdayOfMonthBaseDate,\n\t\t\t\t\tlets(\n\t\t\t\t\t\tbaseMonthDate,\n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\ttimeNow > dueProp,\n\t\t\t\t\t\t\t\ttimeNow,\n\t\t\t\t\t\t\t\tdueProp\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\n\t\t\t\t\t\tweekday, toNumber(at(weekdays, 0)),\n\t\t\t\t\t\t\n\t\t\t\t\t\tfirstDayOfNextMonth, dateAdd(dateSubtract(baseMonthDate, date(baseMonthDate) - 1, \"days\"), 1, \"months\"),\n\t\t\t\t\t\t\n\t\t\t\t\t\tifs(\n\t\t\t\t\t\t\tday(firstDayOfNextMonth) < weekday, dateAdd(firstDayOfNextMonth, weekday - day(firstDayOfNextMonth), \"days\"),\n\t\t\t\t\t\t\tday(firstDayOfNextMonth) > weekday, dateAdd(firstDayOfNextMonth, weekday - day(firstDayOfNextMonth) + 7, \"days\"),\n\t\t\t\t\t\t\tfirstDayOfNextMonth\n\t\t\t\t\t\t)\n\t\t\t\t\t),\n\t\t\t\t\t\n\t\t\t\tnthWeekdayOfMonthBaseDate, dateAdd(firstWeekdayOfMonthBaseDate, recurIntervalProp - 1, \"weeks\"),\n\t\t\t\t\n\t\t\t\tnextDueStart,\n\t\t\t\t\tifs(\n\t\t\t\t\t\trecurUnit == \"days\" and length(weekdays) > 0 and recurIntervalProp == 1, \n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tdateNow >= dateDue,\n\t\t\t\t\t\t\t\tifs(\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 1, \"days\")))), dateAdd(dateNow, 1, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 2, \"days\")))), dateAdd(dateNow, 2, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 3, \"days\")))), dateAdd(dateNow, 3, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 4, \"days\")))), dateAdd(dateNow, 4, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 5, \"days\")))), dateAdd(dateNow, 5, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 6, \"days\")))), dateAdd(dateNow, 6, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateNow, 7, \"days\")))), dateAdd(dateNow, 7, \"days\"),\n\t\t\t\t\t\t\t\t\temptyDate\n\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\tifs(\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 1, \"days\")))), dateAdd(dateDue, 1, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 2, \"days\")))), dateAdd(dateDue, 2, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 3, \"days\")))), dateAdd(dateDue, 3, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 4, \"days\")))), dateAdd(dateDue, 4, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 5, \"days\")))), dateAdd(dateDue, 5, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 6, \"days\")))), dateAdd(dateDue, 6, \"days\"),\n\t\t\t\t\t\t\t\t\tincludes(weekdays, format(day(dateAdd(dateDue, 7, \"days\")))), dateAdd(dateDue, 7, \"days\"),\n\t\t\t\t\t\t\t\t\temptyDate\n\t\t\t\t\t\t\t\t)\n\t\t\t\t\t\t\t),\n\n\t\t\t\t\t\trecurUnit == \"nthweekdayofmonth\" and length(weekdays) == 1 and recurIntervalProp >= 1 and recurIntervalProp <= 5,\n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tmonth(nthWeekdayOfMonthBaseDate) == month(firstWeekdayOfMonthBaseDate),\n\t\t\t\t\t\t\t\tnthWeekdayOfMonthBaseDate,\n\t\t\t\t\t\t\t\tdateSubtract(nthWeekdayOfMonthBaseDate, 1, \"week\")\n\t\t\t\t\t\t\t),\n\n\t\t\t\t\t\trecurUnit == \"monthsonthelastday\",\n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tdateNow >= lastDayBaseDate,\n\t\t\t\t\t\t\t\tnextLastBaseDate,\n\t\t\t\t\t\t\t\tlastDayBaseDate\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\n\t\t\t\t\t\trecurUnit == \"monthsonthefirstweekday\",\n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tdateNow >= firstWeekdayBaseDate,\n\t\t\t\t\t\t\t\tnextFirstWeekday,\n\t\t\t\t\t\t\t\tfirstWeekdayBaseDate\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\n\t\t\t\t\t\trecurUnit == \"monthsonthelastweekday\",\n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tdateNow >= lastWeekdayBaseDate,\n\t\t\t\t\t\t\t\tnextLastWeekday,\n\t\t\t\t\t\t\t\tlastWeekdayBaseDate\n\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\n\t\t\t\t\t\tincludes([\"days\", \"weeks\", \"months\", \"years\"], recurUnit), \n\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\tdateBetween(dateNow, dateDue, \"days\") >= 1,\n\t\t\t\t\t\t\t\tif(\n\t\t\t\t\t\t\t\t\trecurUnitLapseLength == ceil(recurUnitLapseLength),\n\t\t\t\t\t\t\t\t\tdateAdd(dateDue, (recurUnitLapseLength + 1) * recurIntervalProp, recurUnit),\n\t\t\t\t\t\t\t\t\tdateAdd(dateDue, ceil(recurUnitLapseLength) * recurIntervalProp, recurUnit)\n\t\t\t\t\t\t\t\t),\n\t\t\t\t\t\t\t\tdateAdd(dateDue, recurIntervalProp, recurUnit)\n\t\t\t\t\t\t\t),\n\n\t\t\t\t\t\temptyDate\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\trecurRange, dateBetween(nextDueStart, dateDue, \"days\"),\n\t\t\t\t\n\t\t\t\ttimeNextDueStart, dateAdd(dateStart(dueProp), recurRange, \"days\"),\n\t\t\t\t\n\t\t\t\ttimeNextDueEnd, dateAdd(dateEnd(dueProp), recurRange, \"days\"),\n\t\t\t\t\n\t\t\t\tnextDue,\n\t\t\t\t\tif(\n\t\t\t\t\t\thasRange,\n\t\t\t\t\t\tdateRange(timeNextDueStart, timeNextDueEnd),\n\t\t\t\t\t\ttimeNextDueStart\n\t\t\t\t\t),\n\t\t\t\t\n\t\t\t\tnextDue\n\t\t\t),\n\t\t\tdueProp\n\t\t),\n\t\temptyDate\n\t)\n)"
+      }
+    },
+    "Days": {
+      "id": "_%3CZn",
+      "name": "Days",
+      "description": "Allows you to pick specific days of the week – e.g. M/W/F. Works in 2 scenarios:\n\nRecur Unit = Day(s) and Recur Interval = 1. Allows for schedules like \"M/W/F\"\n\nRecur Unit = Nth Weekday of Month and Days has ONE value. Allows for schedules like \"Every 3rd Monday of the month\"",
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "e7a164fd-632e-47d1-95d5-e33c26644bb3",
+            "name": "Monday",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "77dbc525-0b1b-4a8f-a931-4de97b409138",
+            "name": "Tuesday",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "5163f1df-fe13-4bde-9427-a65f8ab525c8",
+            "name": "Wednesday",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "5563e89b-0882-4d71-b5dd-a05881c8722d",
+            "name": "Thursday",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "a49d2413-cc22-4d68-b667-f4f7174e2a87",
+            "name": "Friday",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "50b3506b-9e55-4ff0-b774-a2998db477c3",
+            "name": "Saturday",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "81d4cd6d-3a11-4e6a-aa95-775e1cfc7f52",
+            "name": "Sunday",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Edited": {
+      "id": "aOtK",
+      "name": "Edited",
+      "description": "The last edited time of the task.",
+      "type": "last_edited_time",
+      "last_edited_time": {}
+    },
+    "Project": {
+      "id": "jbTO",
+      "name": "Project",
+      "description": "This Relation connects to the Projects database, allowing you to associate a project with your tasks.",
+      "type": "relation",
+      "relation": {
+        "database_id": "1a5abcb1-dcc4-81f0-929d-dc331fc0cc7c",
+        "data_source_id": "1a5abcb1-dcc4-815d-ba68-000b7450d017",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Tasks",
+          "synced_property_id": "TWP%60"
+        }
+      }
+    },
+    "Due": {
+      "id": "lQh%3C",
+      "name": "Due",
+      "description": "The due date for the task.",
+      "type": "date",
+      "date": {}
+    },
+    "Status": {
+      "id": "oHKB",
+      "name": "Status",
+      "description": "Tracks the status of the task. Most views in Ultimate Tasks show this property as a checkbox. \n\nChecking the checkbox will alternate Status between \"To Do\" and \"Done\". ⌥/Alt + Click the checkbox in order to access all options, including \"Doing\".",
+      "type": "status",
+      "status": {
+        "options": [
+          {
+            "id": "0bffdb92-72e3-4d18-9974-245d59e47373",
+            "name": "To Do",
+            "color": "red",
+            "description": "Tasks that you need to do."
+          },
+          {
+            "id": "bece499b-0b37-477c-aa06-bb4c424861d4",
+            "name": "Doing",
+            "color": "blue",
+            "description": "Tasks you're currently doing."
+          },
+          {
+            "id": "abfae659-ed91-4c0f-b774-0d4075422f72",
+            "name": "Done",
+            "color": "green",
+            "description": "Tasks that are done."
+          }
+        ],
+        "groups": [
+          {
+            "id": "876867c2-5f8a-45ab-af55-41d21231f14e",
+            "name": "To-do",
+            "color": "gray",
+            "option_ids": [
+              "0bffdb92-72e3-4d18-9974-245d59e47373"
+            ]
+          },
+          {
+            "id": "fc747b17-da88-4b06-aca9-315dbadca4a6",
+            "name": "In progress",
+            "color": "blue",
+            "option_ids": [
+              "bece499b-0b37-477c-aa06-bb4c424861d4"
+            ]
+          },
+          {
+            "id": "102dc9ec-82ad-467f-9e64-f2d53f64641e",
+            "name": "Complete",
+            "color": "green",
+            "option_ids": [
+              "abfae659-ed91-4c0f-b774-0d4075422f72"
+            ]
+          }
+        ]
+      }
+    },
+    "Due Timestamp": {
+      "id": "rfZd",
+      "name": "Due Timestamp",
+      "description": "Used to aid in correctly sorting tasks and sub-tasks within Projects.\n\nIf the task doesn't have a Due date set, this timestamp will be 100 years in the future. This simply keeps tasks/sub-tasks without a due date below tasks that have one.",
+      "type": "formula",
+      "formula": {
+        "expression": "!{{notion:block_property:lQh%3C:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t? now().dateAdd(100, \"years\").timestamp()\n\t: {{notion:block_property:lQh%3C:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.timestamp()"
+      }
+    },
+    "Sub-Tasks": {
+      "id": "uF_f",
+      "name": "Sub-Tasks",
+      "description": "If the current task page is a Parent Task, all of its sub-tasks will be shown here.\n\nThis is a Relation property, which is connected to the Parent Task Relation property in this same Tasks database.",
+      "type": "relation",
+      "relation": {
+        "database_id": "1a5abcb1-dcc4-81a4-af34-fd482e85f4df",
+        "data_source_id": "1a5abcb1-dcc4-811e-b1e3-000b543bb3b3",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Parent Task",
+          "synced_property_id": "HebF"
+        }
+      }
+    },
+    "Parent Project": {
+      "id": "vTd_",
+      "name": "Parent Project",
+      "description": "If this page's task is a sub-task, this Rollup property shows the Project of the Parent Task (if one is set).\n\nPrimarily useful for making the Task With Sub-Tasks database template work as expected.",
+      "type": "rollup",
+      "rollup": {
+        "rollup_property_name": "Project",
+        "relation_property_name": "Parent Task",
+        "rollup_property_id": "jbTO",
+        "relation_property_id": "HebF",
+        "function": "show_original"
+      }
+    },
+    "Created": {
+      "id": "z%3AKE",
+      "name": "Created",
+      "description": "The creation time of the task.",
+      "type": "created_time",
+      "created_time": {}
+    },
+    "Assignee": {
+      "id": "%7BTzK",
+      "name": "Assignee",
+      "description": "Use this property to set assignees for each task.\n\nNote that Ultimate Tasks is set up for individual use by default; to make this property useful, you'll want to create filtered views that only show tasks assigned to specific people.",
+      "type": "people",
+      "people": {}
+    },
+    "Meta Labels": {
+      "id": "%7DAYc",
+      "name": "Meta Labels",
+      "description": "Used in List views to show if a task is recurring, and/or if it has unfinished sub-tasks.",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\trecurring,\n\tif(\n\t\tnot empty({{notion:block_property:%5EKYS:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}),\n\t\t\"🔁\",\n\t\t\"\"\n\t),\n\thasSubtask,\n\tif(\n\t\t{{notion:block_property:uF_f:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.filter(current.{{notion:block_property:oHKB:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} != \"Done\").length() > 0,\n\t\t\"\",\n\t\t\"\"\n\t),\n\t[recurring, hasSubtask].join(\" \").replace(\"^\\s\",\"\").replace(\"\\s$\",\"\")\n)"
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": "The name of the task.",
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "1a5abcb1-dcc4-81b4-9fe5-d0dfb91add3d"
+  },
+  "url": "https://www.notion.so/1a5abcb1dcc481a4af34fd482e85f4df",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "4097f56b-cbb2-4729-a97f-34f0839450d5"
+}

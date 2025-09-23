@@ -1,12 +1,13 @@
 // /scripts/generate-carrier-lookup.js
 import { Client } from "@notionhq/client";
 import fs from "fs";
+import { notionDbMap } from "../lib/notionDbMap.mjs";
 
-const CARRIERS_DB_ID = process.env.NOTION_DB_CARRIERS;
+const CARRIERS_DATA_SOURCE_ID = notionDbMap.carriers.dataSourceId;
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
-  notionVersion: "2022-06-28",
+  notionVersion: "2025-09-03", // consistent with your notion-query.js
 });
 
 async function fetchCarriers() {
@@ -14,11 +15,13 @@ async function fetchCarriers() {
   let cursor = undefined;
 
   do {
-    const response = await notion.databases.query({
-      database_id: CARRIERS_DB_ID,
-      start_cursor: cursor,
+    const response = await notion.request({
+      path: `data_sources/${CARRIERS_DATA_SOURCE_ID}/query`,
+      method: "POST",
+      body: cursor ? { start_cursor: cursor } : {}
     });
-    results = results.concat(response.results);
+
+    results = results.concat(response.results || []);
     cursor = response.has_more ? response.next_cursor : undefined;
   } while (cursor);
 
@@ -28,7 +31,9 @@ async function fetchCarriers() {
 function buildLookup(carriers) {
   const lookup = {};
   carriers.forEach((page) => {
-    const nameProp = page.properties?.Name;
+    const props = page.properties || {};
+    const nameProp = props?.Name;
+
     const name =
       nameProp?.title?.[0]?.plain_text?.trim() ||
       nameProp?.rich_text?.[0]?.plain_text?.trim();
@@ -42,7 +47,7 @@ function buildLookup(carriers) {
 
 (async () => {
   try {
-    console.log("🔎 Fetching carriers from Notion…");
+    console.log("🔎 Fetching carriers from Notion (via data source)...");
     const carriers = await fetchCarriers();
     console.log(`✅ Found ${carriers.length} carriers.`);
 
@@ -54,7 +59,6 @@ function buildLookup(carriers) {
       2
     )};\n`;
 
-    // ✅ Write to /lib instead of root
     fs.writeFileSync("./lib/carrierLookup.mjs", output);
 
     console.log("✅ lib/carrierLookup.mjs written. Example:");

@@ -1,0 +1,97 @@
+openapi: 3.0.3
+info:
+  title: JoeBot API
+  version: 1.0.0
+  description: API for Risk Agency’s JoeBot integration with Notion.
+servers:
+  - url: https://joebot-api.vercel.app
+paths:
+  /api/notion-query:
+    get:
+      summary: Query a Notion database
+      operationId: queryNotion
+      parameters:
+        - name: db
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - contacts
+              - agency_codes
+              - aor_procedures
+              - appetite_rules
+              - billing_structure
+              - change_log
+              - claims
+              - commissions
+              - employee_onboarding
+              - endorsements
+              - forms_docs
+              - industries
+              - ivans
+              - line_of_business
+              - loss_run_requests
+              - mailing_addresses
+              - new_business
+              - policy_number_formats
+              - tips_and_tricks
+          description: Database key (see notionDbMap).
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional filter, applies to databases with a filterField (e.g., Carrier).
+        - name: data_source_id
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Optional override of data source ID.
+      responses:
+        "200":
+          description: Successful Notion query
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  count:
+                    type: integer
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+        "400":
+          description: Validation error (missing db or invalid filter).
+        "500":
+          description: Internal server error.
+
+  /api/webhook-handler:
+    post:
+      summary: Handle Notion webhook events
+      operationId: handleWebhook
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: Event type (e.g. page.created, database.deleted).
+                data:
+                  type: object
+                  description: Raw event data from Notion.
+      responses:
+        "200":
+          description: Event processed successfully.
+        "400":
+          description: Invalid event shape.
+        "500":
+          description: Error processing event.

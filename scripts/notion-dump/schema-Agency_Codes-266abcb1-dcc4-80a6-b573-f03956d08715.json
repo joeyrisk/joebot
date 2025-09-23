@@ -1,0 +1,95 @@
+{
+  "object": "database",
+  "id": "266abcb1-dcc4-80a6-b573-f03956d08715",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-09-06T15:46:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:12:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Agency Codes",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Agency Codes",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Notes": {
+      "id": "NfC%3A",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Line of Business": {
+      "id": "oHD%3C",
+      "name": "Line of Business",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8069-ac75-f0d47e991a36",
+        "data_source_id": "24babcb1-dcc4-80ba-89dc-000b05e4f9c9",
+        "type": "single_property",
+        "single_property": {}
+      }
+    },
+    "Segment": {
+      "id": "uFAf",
+      "name": "Segment",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": []
+      }
+    },
+    "Carrier": {
+      "id": "uhme",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "single_property",
+        "single_property": {}
+      }
+    },
+    "Agency Code": {
+      "id": "title",
+      "name": "Agency Code",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/266abcb1dcc480a6b573f03956d08715",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "4ed83a0b-e77a-4014-9c7e-b830f8917bdf"
+}

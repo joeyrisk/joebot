@@ -1,0 +1,67 @@
+{
+  "object": "database",
+  "id": "1a5abcb1-dcc4-81d2-a8a0-cc5ba6a8f4d5",
+  "cover": null,
+  "icon": {
+    "type": "external",
+    "external": {
+      "url": "https://www.notion.so/icons/book_red.svg"
+    }
+  },
+  "created_time": "2025-02-25T15:54:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-02-25T15:57:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Task Journal [UT]",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Task Journal [UT]",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Date": {
+      "id": "hq~H",
+      "name": "Date",
+      "description": "The date this journal entry was created.",
+      "type": "date",
+      "date": {}
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": "The name of the Task Journal entry.",
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "1a5abcb1-dcc4-81b4-9fe5-d0dfb91add3d"
+  },
+  "url": "https://www.notion.so/1a5abcb1dcc481d2a8a0cc5ba6a8f4d5",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "8d3d0256-2a2a-4ae9-8391-732bba8ce3d8"
+}

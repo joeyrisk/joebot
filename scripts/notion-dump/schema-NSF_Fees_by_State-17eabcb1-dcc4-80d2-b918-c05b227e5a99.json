@@ -1,0 +1,78 @@
+{
+  "object": "database",
+  "id": "17eabcb1-dcc4-80d2-b918-c05b227e5a99",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-01-17T21:12:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-01-17T21:33:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "NSF Fees by State",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "NSF Fees by State",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Maximum Fee Allowed": {
+      "id": "%3DRpo",
+      "name": "Maximum Fee Allowed",
+      "description": null,
+      "type": "number",
+      "number": {
+        "format": "dollar"
+      }
+    },
+    "Notes": {
+      "id": "Y%5Bok",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Last edited time": {
+      "id": "he%5DS",
+      "name": "Last edited time",
+      "description": null,
+      "type": "last_edited_time",
+      "last_edited_time": {}
+    },
+    "State": {
+      "id": "title",
+      "name": "State",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "block_id",
+    "block_id": "17eabcb1-dcc4-80e2-ba03-f7a2d9feb9c2"
+  },
+  "url": "https://www.notion.so/17eabcb1dcc480d2b918c05b227e5a99",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "589131de-9cc7-40bd-a9e6-13bdd7abec10"
+}

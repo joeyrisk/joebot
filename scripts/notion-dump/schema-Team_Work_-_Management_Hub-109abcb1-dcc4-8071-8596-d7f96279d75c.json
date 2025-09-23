@@ -1,0 +1,228 @@
+{
+  "object": "database",
+  "id": "109abcb1-dcc4-8071-8596-d7f96279d75c",
+  "cover": {
+    "type": "file",
+    "file": {
+      "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/c071aa24-b1a2-4f78-b209-0b11d129cf4b/b983110f-df4d-4c51-afb2-860c6d5c2724/Black_and_Red_Gradient_Professional_LinkedIn_Banner.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4666J72OGS4%2F20250908%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250908T011120Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJIMEYCIQCq8JPWYvFUDP3BtVxToMUGWOr51%2FTUyvODQzUuUGif6AIhAPw%2B6pL7iwStSi3XMnB3EpQ6dWxsYrM%2FxfZvqjIwF78bKogECLL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgxPDbKmVA3j%2BwOby1Uq3ANpQ6YNsBx%2BV4X5bGeH22ZPay%2F%2BgFTrdflENA9SeKioLPbdXrBvMjHTdRSGLlwZxudaHsDRGxq5rjN9YajAZt3nskp6BEQQdrVLw49%2Bs%2BcpcpaXSBUsBlGEII2KdaExnzvbu6PwmPryy2d69MhVKUC1w%2BN%2FqQjcX6lacVy%2F9ff7twTGAAV95%2BsTbNnFdFb8wmecaydYFQHPK%2FSz%2BKWI0kcyVHEsCYtCxG6Wq6lf%2FLNIfWAf%2BZQ2Mh1K0w%2FvVikXRZi1nExOqcnxIxXrKsbbVwubOXYZJ2587b5ii7uihU1icl0OIgOpTiE38uuIVbIXWKmYYr9a3JQErq2enenRq6FBrb6tMM%2BiQ3DaeqswHWClO2e3YfNGfANxfM83wf5TX5HEDrjBJohY0Sg0a75wZ5eLMW9ZO2x%2BlZaoyvEODGZiZ57ZEUJJ5lHxU8114OqxDg7QvPq5ZTvOcYhWNs2hIJjwz9jySBCiHwMoAf2UuMnwRMqVjxSYhUIHsu4dFF17yevtZeQzMlXZazJgH5Z3cbGovm58zBu7pgak9Xm1zKPUSS4ia%2B6nduFxTJOpI6kdulukYoljQf0qihsvzcQHEBMr%2Feo59C%2Fg6i1UmUc8BGPNpdR1X4IwISAZrbC5wjDdz%2FjFBjqkAY0i%2FuFYe%2B6uroJWCO7Q4DQIRM%2Fve%2Fr8g0Z42UpQiCax7uC5OlWwBlKGmuBDigYpkzM3T1FY82pj%2BSC%2F9S9nnUgr8yBZ3w4Iz4hnQ55kWPpd966c9hk%2BIf7lQO5pTv%2BVl7fQs4XD27rzCh%2FMT3ks5koIG43zRlzsbYrwU20M%2ByGJrykp0YARHRe%2BnXLVmHEBAuCQ4uU0Yi9C9Cn0niaa4DXxhyzS&X-Amz-Signature=6d987d2d2378d52ee14269d17a52d7d877244780ece9528100174191dc1519b7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "expiry_time": "2025-09-08T02:11:20.861Z"
+    }
+  },
+  "icon": {
+    "type": "external",
+    "external": {
+      "url": "https://www.notion.so/icons/lock_blue.svg"
+    }
+  },
+  "created_time": "2024-09-22T23:33:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "093c4538-bd41-444c-9d6c-93dd347dd595"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-06T20:16:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Team Work - Management Hub",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Team Work - Management Hub",
+      "href": null
+    }
+  ],
+  "description": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Welcome to the main RISK Agency hub. This is dedicated to only management and operations of both agencies.",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Welcome to the main RISK Agency hub. This is dedicated to only management and operations of both agencies.",
+      "href": null
+    }
+  ],
+  "is_inline": false,
+  "properties": {
+    "Last edited time": {
+      "id": "Za%5Dy",
+      "name": "Last edited time",
+      "description": null,
+      "type": "last_edited_time",
+      "last_edited_time": {}
+    },
+    "Verification": {
+      "id": "%5B%5Dar",
+      "name": "Verification",
+      "description": null,
+      "type": "verification",
+      "verification": {}
+    },
+    "Date": {
+      "id": "l~V%5E",
+      "name": "Date",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Page": {
+      "id": "title",
+      "name": "Page",
+      "description": null,
+      "type": "title",
+      "title": {}
+    },
+    "Owner": {
+      "id": "notion%3A%2F%2Fwiki%2Fowner_property",
+      "name": "Owner",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Category": {
+      "id": "b26d4649-638f-4c1d-9546-ab4984a8d6bb",
+      "name": "Category",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": ">_qk",
+            "name": "Operations",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "xoZq",
+            "name": "Compliance & Risk Management",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "oUSe",
+            "name": "HR",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "zSoA",
+            "name": "Office",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "<_I[",
+            "name": "Admin",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "y_^P",
+            "name": "Service",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "0eddf29b-4088-46c2-a32e-a64c378dd06f",
+            "name": "Glossary",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "d^Gc",
+            "name": "Renewal",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "lOTg",
+            "name": "Accounting",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "6751d0e9-e137-446a-90b5-08c0ffe54d1b",
+            "name": "E&S",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "W@:U",
+            "name": "Sales",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "RZVX",
+            "name": "New Business",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "UG_`",
+            "name": "Epic",
+            "color": "blue",
+            "description": ""
+          },
+          {
+            "id": "rPag",
+            "name": "AI / Chat GPT",
+            "color": "orange",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Agency": {
+      "id": "daba2c5f-679e-4ca1-98cf-4a3f426ba810",
+      "name": "Agency",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "=@C`",
+            "name": "Gooshead",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "e>EP",
+            "name": "Risk",
+            "color": "blue",
+            "description": null
+          }
+        ]
+      }
+    }
+  },
+  "parent": {
+    "type": "workspace",
+    "workspace": true
+  },
+  "url": "https://www.notion.so/109abcb1dcc480718596d7f96279d75c",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "288a120e-9b24-4391-9676-d01b193076a5"
+}

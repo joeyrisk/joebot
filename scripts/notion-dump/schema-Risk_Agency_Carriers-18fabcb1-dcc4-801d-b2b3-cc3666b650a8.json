@@ -1,0 +1,339 @@
+{
+  "object": "database",
+  "id": "18fabcb1-dcc4-801d-b2b3-cc3666b650a8",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-02-03T17:08:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-08-10T22:31:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Risk Agency Carriers",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Risk Agency Carriers",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Notes for Joe Bot": {
+      "id": "%3ECRy",
+      "name": "Notes for Joe Bot",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Appetite": {
+      "id": "%3FIYS",
+      "name": "Appetite",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8023-88c8-feff65a63e6e",
+        "data_source_id": "24babcb1-dcc4-80f6-904d-000bf9373c6b",
+        "type": "single_property",
+        "single_property": {}
+      }
+    },
+    "Last edited by": {
+      "id": "CR%7D%5C",
+      "name": "Last edited by",
+      "description": null,
+      "type": "last_edited_by",
+      "last_edited_by": {}
+    },
+    "Partner Type": {
+      "id": "DPnr",
+      "name": "Partner Type",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "f2534d70-bb2b-4f73-b128-730c305e4a32",
+            "name": "Broker",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "ec5e2828-378a-456e-9906-8e15a076f759",
+            "name": "Carrier",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "9e851dec-69c9-4a67-b597-a4b720831b60",
+            "name": "MGA",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "fc8f2697-9b1a-451c-a90e-421c4a719543",
+            "name": "Multi-Rater",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "2ad36210-2520-4e24-ab45-09d6fcb48227",
+            "name": "Holding Company",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "30e39b07-12a4-4fdc-8961-5daee1371adb",
+            "name": "Independent Agency",
+            "color": "green",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Notion Page Link": {
+      "id": "DX%3EX",
+      "name": "Notion Page Link",
+      "description": null,
+      "type": "url",
+      "url": {}
+    },
+    "Date": {
+      "id": "Ku%60g",
+      "name": "Date",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Agency Priority": {
+      "id": "%5BpoD",
+      "name": "Agency Priority",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "d5d57c6c-45e8-4c2e-9265-adb1ebe73681",
+            "name": "Go-To",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "47ef5697-351f-4b70-bebc-cbc33ae84bd4",
+            "name": "Consider",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "371a3bf3-a29c-4fc2-b15d-78017c45b663",
+            "name": "Last Resort",
+            "color": "blue",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Appointment Contact Last Name": {
+      "id": "%5Brnx",
+      "name": "Appointment Contact Last Name",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Appointment Process": {
+      "id": "_t%7Ds",
+      "name": "Appointment Process",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "}N~l",
+            "name": "Request from Carrier",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "]kUi",
+            "name": "No Login Required",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "U}oD",
+            "name": "Through Carrier Portal",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Submission Notes": {
+      "id": "bOqb",
+      "name": "Submission Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Line of Business": {
+      "id": "j%60%5Cv",
+      "name": "Line of Business",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "91970f57-bffe-4665-b89c-620e45ccd0f0",
+            "name": "BOP",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": "acf62478-b786-4bdf-87cf-0c1da50f77a0",
+            "name": "BR",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "3c589a5c-425c-4152-9731-23103c143b67",
+            "name": "D&O",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "1b46ff94-0ed8-4b59-acea-bb6fd8a2f1a1",
+            "name": "E&O",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "ae293f84-ec92-4be4-90b5-19d0d597cfb7",
+            "name": "Excess",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "1e91aaa6-6c9b-4f52-8f16-a4ec49fea6a5",
+            "name": "GL",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "af096d36-fa09-481c-ade9-84ff0b3664c8",
+            "name": "Property",
+            "color": "default",
+            "description": null
+          },
+          {
+            "id": "32c48f26-00e1-4b16-86ad-7157da39d413",
+            "name": "WC",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "9a85a7f4-7103-4961-a818-707842225a7b",
+            "name": "Auto",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "ce760e5c-10b4-482c-b384-9e2e4e1cfadd",
+            "name": "Inland Marine",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "57840ace-ed3f-4690-b1a8-a8254b22f335",
+            "name": "Contractors Professional & Pollution Liability (CPPL)",
+            "color": "red",
+            "description": null
+          },
+          {
+            "id": "1c16909e-5b78-4a4f-9068-00255f4d4325",
+            "name": "Special Events",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "346953e7-e2f9-4669-b864-e3ed4d77ddae",
+            "name": "Employment Practices Liability",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "e94f1299-9387-4fc7-973e-8c64225be19d",
+            "name": "Flood",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "e102b58c-8c55-4e78-8c9c-92aa8438e528",
+            "name": "Specialty",
+            "color": "yellow",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Last edited time": {
+      "id": "n%3FPp",
+      "name": "Last edited time",
+      "description": null,
+      "type": "last_edited_time",
+      "last_edited_time": {}
+    },
+    "Appointment Contact Email": {
+      "id": "oCKD",
+      "name": "Appointment Contact Email",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Appointment Contact First Name": {
+      "id": "rs%3Eh",
+      "name": "Appointment Contact First Name",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Appetite Summary": {
+      "id": "tf%3Du",
+      "name": "Appetite Summary",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "block_id",
+    "block_id": "18fabcb1-dcc4-809a-8172-c6c790798795"
+  },
+  "url": "https://www.notion.so/18fabcb1dcc4801db2b3cc3666b650a8",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "6a6171c4-2336-4a44-92af-16e6dc70cfb4"
+}

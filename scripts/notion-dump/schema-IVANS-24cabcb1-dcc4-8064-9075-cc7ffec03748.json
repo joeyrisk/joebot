@@ -1,0 +1,106 @@
+{
+  "object": "database",
+  "id": "24cabcb1-dcc4-8064-9075-cc7ffec03748",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-08-11T04:30:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:13:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "IVANS",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "IVANS",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Machine Address": {
+      "id": "%3E%3AYQ",
+      "name": "Machine Address",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Job Aid URL": {
+      "id": "ER%5EE",
+      "name": "Job Aid URL",
+      "description": null,
+      "type": "url",
+      "url": {}
+    },
+    "Account": {
+      "id": "caNW",
+      "name": "Account",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Carrier": {
+      "id": "h%3AUi",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "IVANS",
+          "synced_property_id": "BTnK"
+        }
+      }
+    },
+    "Job Aid Doc": {
+      "id": "v%40Eo",
+      "name": "Job Aid Doc",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-805c-abec-c3d08d7e570d",
+        "data_source_id": "24babcb1-dcc4-8013-8f63-000b7951dec9",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "IVANS",
+          "synced_property_id": "wbGf"
+        }
+      }
+    },
+    "_Hidden": {
+      "id": "title",
+      "name": "_Hidden",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/24cabcb1dcc480649075cc7ffec03748",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "4ae69446-8b3a-45e9-9697-e8a2daf0d671"
+}

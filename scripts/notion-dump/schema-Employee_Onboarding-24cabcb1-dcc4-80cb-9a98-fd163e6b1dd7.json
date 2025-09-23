@@ -1,0 +1,254 @@
+{
+  "object": "database",
+  "id": "24cabcb1-dcc4-80cb-9a98-fd163e6b1dd7",
+  "cover": null,
+  "icon": null,
+  "created_time": "2025-08-11T06:24:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "3a347e2c-0583-4239-af42-91462822f0cd"
+  },
+  "last_edited_time": "2025-09-08T01:13:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Employee Onboarding",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Employee Onboarding",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Required Agency Steps": {
+      "id": "A%3Els",
+      "name": "Required Agency Steps",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "SLA": {
+      "id": "Fll%5C",
+      "name": "SLA",
+      "description": null,
+      "type": "number",
+      "number": {
+        "format": "number"
+      }
+    },
+    "Carrier": {
+      "id": "GR%40b",
+      "name": "Carrier",
+      "description": null,
+      "type": "relation",
+      "relation": {
+        "database_id": "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33",
+        "data_source_id": "24babcb1-dcc4-8186-a948-000bea7489ab",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Employee Onboarding",
+          "synced_property_id": "HvBz"
+        }
+      }
+    },
+    "Access Type": {
+      "id": "OvmD",
+      "name": "Access Type",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "opiz",
+            "name": "User Admin",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "B@H_",
+            "name": "Billing",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "uFFz",
+            "name": "Commission Statements",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "`dFT",
+            "name": "Endorsements",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "lkRZ",
+            "name": "Policy Documents",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "~z;=",
+            "name": "Quoting",
+            "color": "default",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Portal": {
+      "id": "Y%3Fj%40",
+      "name": "Portal",
+      "description": null,
+      "type": "url",
+      "url": {}
+    },
+    "Notes": {
+      "id": "b%3Eih",
+      "name": "Notes",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Last Verified": {
+      "id": "bwQi",
+      "name": "Last Verified",
+      "description": null,
+      "type": "date",
+      "date": {}
+    },
+    "Page Owner": {
+      "id": "fRtH",
+      "name": "Page Owner",
+      "description": null,
+      "type": "people",
+      "people": {}
+    },
+    "Job Title": {
+      "id": "tt%7D_",
+      "name": "Job Title",
+      "description": null,
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "id": "N=RR",
+            "name": "Account Manager",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": "Ai@o",
+            "name": "Accounting",
+            "color": "brown",
+            "description": null
+          },
+          {
+            "id": "H}BM",
+            "name": "Admin",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "weqO",
+            "name": "Executive",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "]C\\l",
+            "name": "HR",
+            "color": "yellow",
+            "description": null
+          },
+          {
+            "id": ";^JN",
+            "name": "Producer",
+            "color": "purple",
+            "description": null
+          },
+          {
+            "id": "HUiQ",
+            "name": "Tech",
+            "color": "gray",
+            "description": null
+          }
+        ]
+      }
+    },
+    "License Required": {
+      "id": "xwbZ",
+      "name": "License Required",
+      "description": null,
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "Required Employee Steps": {
+      "id": "%7BGvu",
+      "name": "Required Employee Steps",
+      "description": null,
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Necessary Docs": {
+      "id": "%7B%5BX%5E",
+      "name": "Necessary Docs",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "H^M>",
+            "name": "Appointment Form",
+            "color": "gray",
+            "description": null
+          },
+          {
+            "id": "[ki]",
+            "name": "Background Check",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "zTaT",
+            "name": "License",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "_Hidden": {
+      "id": "title",
+      "name": "_Hidden",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "268abcb1-dcc4-809b-9a3c-f34ac15bf3db"
+  },
+  "url": "https://www.notion.so/24cabcb1dcc480cb9a98fd163e6b1dd7",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "790d61eb-e214-4e60-8555-4b7218320c2b"
+}

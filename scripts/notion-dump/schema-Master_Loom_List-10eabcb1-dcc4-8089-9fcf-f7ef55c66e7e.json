@@ -1,0 +1,101 @@
+{
+  "object": "database",
+  "id": "10eabcb1-dcc4-8089-9fcf-f7ef55c66e7e",
+  "cover": null,
+  "icon": null,
+  "created_time": "2024-09-27T06:20:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "093c4538-bd41-444c-9d6c-93dd347dd595"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-04-23T15:51:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Master Loom List",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Master Loom List",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": true,
+  "properties": {
+    "Tags": {
+      "id": "r%3BVk",
+      "name": "Tags",
+      "description": null,
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "id": "aQHv",
+            "name": "Indio",
+            "color": "pink",
+            "description": null
+          },
+          {
+            "id": ":ra<",
+            "name": "Epic",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "8671b3a7-1ef2-4d48-b4e8-036bba153719",
+            "name": "Process",
+            "color": "orange",
+            "description": null
+          },
+          {
+            "id": "8848f4d8-b8ab-4c70-8ced-dbe63e1c2f02",
+            "name": "Salesforce",
+            "color": "blue",
+            "description": null
+          },
+          {
+            "id": "d3892789-2cc5-46d7-8519-e50beedcf6de",
+            "name": "Sales",
+            "color": "green",
+            "description": null
+          },
+          {
+            "id": "a7a89233-36ab-4273-8967-0142852a4b06",
+            "name": "Service",
+            "color": "purple",
+            "description": null
+          }
+        ]
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": null,
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "62a47524-fbc5-414a-8adb-4a7d96df0bbc"
+  },
+  "url": "https://www.notion.so/10eabcb1dcc480899fcff7ef55c66e7e",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "eb3bf5be-fbdb-49eb-b16e-fd61f459d2aa"
+}

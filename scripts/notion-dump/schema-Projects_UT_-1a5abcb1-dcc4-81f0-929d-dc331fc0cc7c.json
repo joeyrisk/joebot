@@ -1,0 +1,200 @@
+{
+  "object": "database",
+  "id": "1a5abcb1-dcc4-81f0-929d-dc331fc0cc7c",
+  "cover": null,
+  "icon": {
+    "type": "external",
+    "external": {
+      "url": "https://www.notion.so/icons/rocket_red.svg"
+    }
+  },
+  "created_time": "2025-02-25T15:54:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "101d872b-594c-81a2-9520-000202fddaf3"
+  },
+  "last_edited_time": "2025-02-25T16:04:00.000Z",
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "Projects [UT]",
+        "link": null
+      },
+      "annotations": {
+        "bold": false,
+        "italic": false,
+        "strikethrough": false,
+        "underline": false,
+        "code": false,
+        "color": "default"
+      },
+      "plain_text": "Projects [UT]",
+      "href": null
+    }
+  ],
+  "description": [],
+  "is_inline": false,
+  "properties": {
+    "Progress": {
+      "id": "%3FDGj",
+      "name": "Progress",
+      "description": "Shows the progress of the project by calculating the percentage of completed tasks related to it.",
+      "type": "formula",
+      "formula": {
+        "expression": "if(\n\t{{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.empty(),\n\t\"\".toNumber(),\n\t({{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t.filter(\n\t\tcurrent.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} == \"Done\" or current.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} == current.{{notion:block_property:MI%3A%60:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.at(2).last()\n\t)\n\t.length()\n/ {{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t.length()\n\t* 1000)\n.round() \n/ 1000\n)"
+      }
+    },
+    "Edited": {
+      "id": "GVoY",
+      "name": "Edited",
+      "description": "The date and time this project was last edited.",
+      "type": "last_edited_time",
+      "last_edited_time": {}
+    },
+    "Created": {
+      "id": "Jn%5DI",
+      "name": "Created",
+      "description": "The date and time this project page was created.",
+      "type": "created_time",
+      "created_time": {}
+    },
+    "Meta": {
+      "id": "M%3AnZ",
+      "name": "Meta",
+      "description": "This formula property displays the number of active tasks in the project, along with the number of overdue tasks.",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\tactive,\n\t{{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t\t.filter(\n\t\t\tcurrent.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} != \"Done\" and current.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} != current.{{notion:block_property:MI%3A%60:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.at(2).last()\n\t\t)\n\t\t.length(),\n\toverdue,\n\t{{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}\n\t\t.filter(\n\t\t\tcurrent.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} != \"Done\" and current.{{notion:block_property:oHKB:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}} != current.{{notion:block_property:MI%3A%60:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.at(2).last()\n\t\t\tand now().dateBetween(current.{{notion:block_property:lQh%3C:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}, \"days\") > 0\n\t\t)\n\t\t.length(),\n\tifs(\n\t\t{{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.length() == 0,\n\t\t\"\",\n\t\tactive == 0,\n\t\t\"\",\n\t\tif(\n\t\t\toverdue == 0,\n\t\t\t(active + \" Active\").style(\"blue\"),\n\t\t\t(active.style(\"b\") + \" Active - \").style(\"blue\") \n\t\t\t+ (overdue.style(\"b\") + \" Overdue\").style(\"red\")\n\t\t)\n\t)\n)"
+      }
+    },
+    "Tasks": {
+      "id": "TWP%60",
+      "name": "Tasks",
+      "description": "Tasks that are part of this Project. This Relation property connects to the Project Relation property in the All Tasks database.",
+      "type": "relation",
+      "relation": {
+        "database_id": "1a5abcb1-dcc4-81a4-af34-fd482e85f4df",
+        "data_source_id": "1a5abcb1-dcc4-811e-b1e3-000b543bb3b3",
+        "type": "dual_property",
+        "dual_property": {
+          "synced_property_name": "Project",
+          "synced_property_id": "jbTO"
+        }
+      }
+    },
+    "Latest Activity": {
+      "id": "%5E%5DcE",
+      "name": "Latest Activity",
+      "description": "Returns the date and time of the latest activity in the project – including the project itself, along with any tasks or notes directly related to it.\n\nUsed for allowing projects to be sorted by Latest Activity in certain views.",
+      "type": "formula",
+      "formula": {
+        "expression": "lets(\n\ttaskActivity,\n\t{{notion:block_property:TWP%60:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}.map(current.{{notion:block_property:aOtK:1a5abcb1-dcc4-81a4-af34-fd482e85f4df:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}).sort().reverse(),\n\teditedList,\n\t[{{notion:block_property:GVoY:00000000-0000-0000-0000-000000000000:c071aa24-b1a2-4f78-b209-0b11d129cf4b}}],\n\tconcat(taskActivity, editedList).sort().reverse().first()\n)"
+      }
+    },
+    "Status": {
+      "id": "f%3EZ%5B",
+      "name": "Status",
+      "description": "The status of the project. For “projects” that contain ongoing/maintenance items, use the Ongoing status.",
+      "type": "status",
+      "status": {
+        "options": [
+          {
+            "id": "78964de7-024c-4834-8613-7acf1fd4a10b",
+            "name": "Planned",
+            "color": "blue",
+            "description": "Projects that you've planned to do, but haven't started yet."
+          },
+          {
+            "id": "nDVh",
+            "name": "On Hold",
+            "color": "red",
+            "description": "Projects that have already been started, but are currently paused from active work."
+          },
+          {
+            "id": "b7857004-db78-43e0-a485-1af9ca982e76",
+            "name": "Doing",
+            "color": "green",
+            "description": "Projects with a defined end goal that you're currently working on."
+          },
+          {
+            "id": "T>zo",
+            "name": "Ongoing",
+            "color": "orange",
+            "description": "Projects that collect and organize tasks meant to maintain an ongoing standard (e.g. maintenance tasks in an Area within the PARA system)."
+          },
+          {
+            "id": "21f348f8-009f-4a58-a9ca-96ed55f5874c",
+            "name": "Done",
+            "color": "purple",
+            "description": "Projects that are complete."
+          }
+        ],
+        "groups": [
+          {
+            "id": "27d54db3-e2a5-4615-9c3c-e621905ab375",
+            "name": "To-do",
+            "color": "gray",
+            "option_ids": [
+              "nDVh",
+              "78964de7-024c-4834-8613-7acf1fd4a10b"
+            ]
+          },
+          {
+            "id": "d667dd23-a03a-44b1-aba6-a19ccf8146e2",
+            "name": "In progress",
+            "color": "blue",
+            "option_ids": [
+              "b7857004-db78-43e0-a485-1af9ca982e76",
+              "T>zo"
+            ]
+          },
+          {
+            "id": "85bb8df3-8f48-4d54-b2dc-41f9f4b9dc37",
+            "name": "Complete",
+            "color": "green",
+            "option_ids": [
+              "21f348f8-009f-4a58-a9ca-96ed55f5874c"
+            ]
+          }
+        ]
+      }
+    },
+    "Archived": {
+      "id": "pU%5Cf",
+      "name": "Archived",
+      "description": "If checked, this project is Archived. It will be removed from all main project views, and will show up in the Archived view.",
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "Localization Key": {
+      "id": "rKDS",
+      "name": "Localization Key",
+      "description": "This property allows you to define translated names for the Project database's key Status options – Planned, On Hold, Doing, Ongoing, and Done.\n\nThese are important for filters in certain database views.",
+      "type": "formula",
+      "formula": {
+        "expression": "/* If you would like to translate your Status option names, translate them in the Status property AND in this formula as well. Below, you'll see variables for each of the important Status options in Ultimate Tasks. For each, you can replace the terms in quotes (\"\") with translated terms. The final argument (the List defined by the brackets) is the return value of this formula. It is a multi-dimensional List (e.g. array), where the most important element is the 2nd (index 1) of the top List. This sub-List contains all of the Status options that are considered Active.\n\nSince Notion formulas don't let us access the Groups of Status properties (e.g. To Do, In Progress, Complete), this is the best way to get the Group of a translated (or added) Status option.\n\nIf you have added extra options that are considered Active, add them as strings between the brackets underneath the additionalActiveStatusOptions variable. This can be helpful if you want to define multiple stages for Active projects.\n\nExample: [\"Design\", \"Development\", \"QA\"] */\n\nlets(\n\tplanned,\n\t/* Edit the term below this line to translated the Planned status. E.g. \"Zaplanowany\" */\n\t\"Planned\",\n\tonHold,\n\t/* Edit the term below this line to translated the On Hold status. \"Zastopowany\" */\n\t\"On Hold\",\n\tdoing,\n\t/* Edit the term below this line to translated the Doing status. \"W trakcie\" */\n\t\"Doing\",\n\tongoing,\n\t/* Edit the term below this line to translated the Ongoing status. \"Otwarty\" */\n\t\"Ongoing\",\n\tdone,\n\t/* Edit the term below this line to translated the Done status. \"Zakończony\" */\n\t\"Done\",\n\tadditionalActiveStatusOptions,\n\t/* If you would like to add additional Active status options, add them as strings between these brackets. See the comment above for an example. */\n\t[],\n\t/* Do not edit anything below this line */\n\t[\n\t\t[planned, onHold],\n\t\t[doing, ongoing, additionalActiveStatusOptions].flat(),\n\t\t[done]\n\t]\n)"
+      }
+    },
+    "Name": {
+      "id": "title",
+      "name": "Name",
+      "description": "The name of the project.",
+      "type": "title",
+      "title": {}
+    }
+  },
+  "parent": {
+    "type": "page_id",
+    "page_id": "1a5abcb1-dcc4-81b4-9fe5-d0dfb91add3d"
+  },
+  "url": "https://www.notion.so/1a5abcb1dcc481f0929ddc331fc0cc7c",
+  "public_url": null,
+  "archived": false,
+  "in_trash": false,
+  "request_id": "1007fd94-4ade-466b-95c8-b773bdc72edc"
+}
