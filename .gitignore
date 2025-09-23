@@ -1,6 +1,25 @@
+# Node modules
 node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# OS junk
 .DS_Store
-.vercel
-.next
-out
+Thumbs.db
+
+# Keep lib/ for source files
+# But ignore generated lookup file
+lib/carrierLookup.mjs
