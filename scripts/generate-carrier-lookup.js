@@ -3,12 +3,12 @@ import { Client } from "@notionhq/client";
 import fs from "fs";
 import { notionDbMap } from "../lib/notionDbMap.mjs";
 
-// ✅ Use the databaseId, not the dataSourceId
+// ✅ Use the databaseId (not the dataSourceId)
 const CARRIERS_DB_ID = notionDbMap.carriers.databaseId;
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
-  notionVersion: "2022-06-28", // stable version works best
+  notionVersion: "2022-06-28", // stable version
 });
 
 async function fetchCarriers() {
@@ -53,4 +53,17 @@ function buildLookup(carriers) {
 
     const lookup = buildLookup(carriers);
 
-    const out
+    const output = `export const carrierLookup = ${JSON.stringify(
+      lookup,
+      null,
+      2
+    )};\n`;
+
+    fs.writeFileSync("./lib/carrierLookup.mjs", output);
+
+    console.log("✅ lib/carrierLookup.mjs written. Example:");
+    console.log(output);
+  } catch (err) {
+    console.error("❌ Error fetching carriers:", err.message);
+  }
+})();
