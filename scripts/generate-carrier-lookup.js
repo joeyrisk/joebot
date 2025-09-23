@@ -1,6 +1,8 @@
 // /scripts/generate-carrier-lookup.js
+import "dotenv/config";
 import { Client } from "@notionhq/client";
 import fs from "fs";
+import { execSync } from "child_process";
 import { notionDbMap } from "../lib/notionDbMap.mjs";
 
 // ✅ Use the databaseId (not the dataSourceId)
@@ -59,11 +61,25 @@ function buildLookup(carriers) {
       2
     )};\n`;
 
-    fs.writeFileSync("./lib/carrierLookup.mjs", output);
+    const filePath = "./lib/carrierLookup.mjs";
+    fs.writeFileSync(filePath, output);
 
     console.log("✅ lib/carrierLookup.mjs written. Example:");
-    console.log(output);
+    console.log(output.slice(0, 500) + "...");
+
+    // 🔥 Auto-commit + push
+    try {
+      execSync(`git add ${filePath}`);
+      execSync(
+        `git commit -m "chore: update carrierLookup.mjs (${carriers.length} carriers)" || echo "No changes to commit"`
+      );
+      execSync(`git push origin main`);
+      console.log("🚀 carrierLookup.mjs committed & pushed to main.");
+    } catch (gitErr) {
+      console.warn("⚠️ Git commit/push skipped:", gitErr.message);
+    }
   } catch (err) {
     console.error("❌ Error fetching carriers:", err.message);
+    console.log("⚠️ Using last committed carrierLookup.mjs as fallback.");
   }
 })();

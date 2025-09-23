@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prebuild": "node ./scripts/generate-carrier-lookup.js"
+    "prebuild": "node -r dotenv/config ./scripts/generate-carrier-lookup.js",
+    "carriers": "node -r dotenv/config ./scripts/generate-carrier-lookup.js"
   },
   "dependencies": {
     "@notionhq/client": "^4.0.2",
