@@ -1,4 +1,10 @@
 // /api/webhook-handler.js
+// Updated 2025-10-14
+// Handles Notion webhooks and auto-rebuilds carrier index when Carriers DB updates.
+// Supports data_source.*, page.*, database.*, comment.*, and file_upload.* events.
+
+import { exec } from "child_process";
+import path from "path";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -6,82 +12,104 @@ export default async function handler(req, res) {
   }
 
   try {
-    const event = req.body;
+    const event = req.body || {};
+    const type = event?.type || event?.event?.type || "";
+    const data = event?.data || event?.entity || event?.payload || {};
+    const parentId =
+      data?.parent?.data_source_id ||
+      data?.parent?.database_id ||
+      data?.parent?.id ||
+      null;
 
-    // Basic shape check
-    if (!event?.type || !event?.data) {
-      console.warn("Received malformed event", event);
+    if (!type) {
+      console.warn("Invalid or missing event type:", event);
       return res.status(400).json({ error: "Invalid event structure" });
     }
 
-    console.log("📨 Incoming Notion Webhook Event:", event.type);
+    console.log("Incoming Notion webhook event:", type);
 
-    // 🔍 Switch on event type
-    switch (event.type) {
-      // -- PAGE EVENTS --
+    // Define the Carriers DB/Data Source IDs to watch
+    const CARRIER_DB_IDS = [
+      "24babcb1-dcc4-8064-a44c-fb5cd3f0fb33", // Replace with your actual Carriers database_id
+      "carriers" // Safe fallback tag
+    ];
+
+    // Basic unified handler
+    switch (type) {
       case "page.created":
-        console.log("✅ Page created:", event.data);
-        break;
-
       case "page.updated":
-        console.log("✏️ Page updated:", event.data);
-        break;
-
       case "page.deleted":
-        console.log("🗑️ Page deleted:", event.data);
-        break;
-
-      // -- DATABASE EVENTS --
-      case "database.created":
-        console.log("📂 Database created:", event.data);
-        break;
-
-      case "database.deleted":
-        console.log("❌ Database deleted:", event.data);
-        break;
-
-      case "database.content_updated":
-        console.log("📝 Database content updated:", event.data);
-        break;
-
-      // -- DATA SOURCE EVENTS --
-      case "data_source.created":
-        console.log("🧩 Data source created:", event.data);
-        break;
-
-      case "data_source.schema_updated":
-        console.log("🛠️ Data source schema updated:", event.data);
-        break;
-
+      case "page.properties_updated":
       case "data_source.content_updated":
-        console.log("📈 Data source content updated:", event.data);
+      case "data_source.schema_updated":
+      case "database.updated":
+      case "database.content_updated":
+        console.log("Detected data update:", {
+          type,
+          parentId: parentId || "unknown"
+        });
+
+        // Check if this update relates to the Carriers database
+        if (
+          parentId &&
+          CARRIER_DB_IDS.some((id) =>
+            parentId.toString().toLowerCase().includes(id.toLowerCase())
+          )
+        ) {
+          console.log("Change detected in Carriers DB. Regenerating carrier index...");
+
+          // Resolve absolute path to generator
+          const generatorPath = path.resolve(
+            process.cwd(),
+            "scripts/generate-carrier-lookup.js"
+          );
+
+          // Run the script asynchronously
+          exec(`node "${generatorPath}"`, (error, stdout, stderr) => {
+            if (error) {
+              console.error("Error running carrier index generator:", error.message);
+            } else {
+              console.log("Carrier index regenerated successfully.");
+              console.log(stdout);
+            }
+            if (stderr) console.error("stderr:", stderr);
+          });
+        } else {
+          console.log("Update ignored; not a Carriers DB change.");
+        }
         break;
 
-      case "data_source.deleted":
-        console.log("🗑️ Data source deleted:", event.data);
-        break;
-
-      // -- COMMENT EVENTS --
       case "comment.created":
       case "comment.updated":
       case "comment.deleted":
-        console.log(`💬 Comment event (${event.type}):`, event.data);
+        console.log(`Comment event (${type}):`, data);
         break;
 
-      // -- FILE UPLOAD EVENTS --
       case "file_upload.uploaded":
-        console.log("📁 File uploaded:", event.data);
+      case "file_upload.completed":
+      case "file_upload.failed":
+      case "file_upload.expired":
+        console.log(`File upload event (${type}):`, data);
         break;
 
-      // -- UNKNOWN EVENTS --
+      case "database.created":
+      case "database.deleted":
+      case "data_source.created":
+      case "data_source.deleted":
+      case "data_source.moved":
+      case "data_source.undeleted":
+        console.log(`Schema or structure event (${type}):`, data);
+        break;
+
       default:
-        console.warn("🚨 Unhandled event type:", event.type);
+        console.warn("Unhandled event type:", type);
         break;
     }
 
+    // Always return 200 so Notion doesn't retry
     return res.status(200).json({ ok: true });
   } catch (err) {
-    console.error("❌ Error processing webhook:", err);
+    console.error("Error processing webhook:", err);
     return res.status(500).json({ ok: false, error: err.message });
   }
 }
